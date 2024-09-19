@@ -1,0 +1,607 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <title>ERG COMEX</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Fuentes personalizadas -->
+    <link href="https://fonts.googleapis.com/css?family=Roboto:400,700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+
+
+    <!-- Estilos personalizados -->
+    <style>
+        /* Importar fuentes desde Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400&display=swap');
+
+/* Estilo general del cuerpo */
+body {
+    font-family: 'Roboto', sans-serif;
+    color: #333; /* Color de texto principal */
+    line-height: 1.6; /* Altura de línea para mejorar la legibilidad */
+    margin: 0;
+    padding: 0;
+}
+
+/* Estilo para encabezados */
+h1, h2, h3 {
+    font-family: 'Montserrat', sans-serif;
+    color: #2c3e50; /* Color de texto de encabezados */
+}
+
+/* Tamaños de fuentes para encabezados */
+h1 {
+    font-size: 2.5em; /* Tamaño de fuente para h1 */
+    margin-bottom: 0.5em; /* Espaciado inferior */
+}
+
+h2 {
+    font-size: 2em; /* Tamaño de fuente para h2 */
+    margin-bottom: 0.5em; /* Espaciado inferior */
+}
+
+h3 {
+    font-size: 1.5em; /* Tamaño de fuente para h3 */
+    margin-bottom: 0.5em; /* Espaciado inferior */
+}
+
+/* Estilo para párrafos */
+p {
+    font-family: 'Roboto', sans-serif;
+    font-size: 1em; /* Tamaño de fuente para párrafos */
+    margin-bottom: 1em; /* Espaciado inferior */
+    line-height: 1.6; /* Altura de línea para mejorar la legibilidad */
+    color: #2c3e50; /* Color de texto de párrafos */
+}
+
+/* Estilo para enlaces */
+a {
+    color: #007bff; /* Color de enlaces */
+    text-decoration: none; /* Quitar subrayado por defecto */
+}
+
+
+
+       
+        body {
+            font-family: 'Roboto', sans-serif;
+        }
+
+        .navbar-brand {
+            font-weight: bold;
+        }
+
+        .banner {
+            background-image: url('./img/logistics-transportation-container-cargo-ship-cargo-plane-with-working-crane-bridge-shipyard-sunrise-logistic-import-export-transport-industry-background-ai-generative.jpg'); 
+            background-size: cover;
+            background-position: center;
+            color: #fff;
+            text-align: center;
+            padding: 150px 20px;
+        }
+
+        .logo {
+            
+            height: 70px;
+            border-radius: 25px;
+            margin-left: 15px;
+          
+        }
+
+        .colorP {
+            color: #ffffff;
+            font-weight: bold;
+            
+        }
+    .colorContact {
+        color: #cfd3d9;
+    }
+        /* Estilos para la sección de servicios */
+
+        .background {
+            background-color: #7d8dc4;
+        }
+
+        
+
+        .full-height {
+    height: 100%; /* Asegura que la imagen ocupe todo el alto disponible */
+    object-fit: cover; /* Ajusta la imagen dentro del espacio disponible */
+    border-radius: 10px;
+}
+
+
+         #servicios {
+            background-color: #ffffff; /* Fondo blanco */
+            padding-top: auto;
+        }
+
+        
+
+        .service-card {
+            border: 1px solid #7d8dc4; /* Borde de la tarjeta */
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            background-color: #ffffff; /* Fondo de la tarjeta */
+        }
+
+        .service-card .card-body {
+            padding: 20px;
+            color: #464d50; /* Texto principal */
+        }
+
+        .service-card h3 {
+            color: #7d8dc4; /* Color de los encabezados */
+        }
+
+        .service-card p {
+            margin-bottom: 15px;
+        }
+
+        .card-body strong {
+            color: #464d50; /* Color para los textos destacados */
+        }
+
+        /* Estilo base para las tarjetas */
+.card.service-card {
+    transition: transform 0.3s ease; /* Suaviza el cambio en la transformación */
+    transform: scale(1); /* Tamaño original */
+    cursor: pointer;
+}
+
+/* Efecto al pasar el mouse */
+.card.service-card:hover {
+    transform: scale(1.05); /* Ampliar la tarjeta un 5% */
+}
+
+        
+          /* Estilos para la sección de contacto */
+          #contacto {
+            background-color: #182c44; /* Fondo de la sección */
+            color: #cfd3d9; /* Color del texto */
+        }
+
+        
+        .contact-info p {
+            color: #cfd3d9; /* Color del texto dentro de la sección de contacto */
+        }
+
+        .section-title {
+            
+            
+            margin-top: 40px;
+        }
+
+        .service-item, .value-item {
+            margin-bottom: 30px;
+        }
+
+        
+        .text-content {
+            font-family: 'Arial', sans-serif; /* Tipo de fuente */
+    font-size: 16px; /* Tamaño de fuente */
+    line-height: 1.5; /* Altura de línea */
+    color: #333; /* Color del texto */
+    margin: 20px;
+    
+    font-weight: bold;
+        }
+
+        footer {
+            background-color: #002244;
+            color: #fff;
+            text-align: center;
+            padding: 20px;
+        }
+
+        /* Botón flotante de WhatsApp */
+    .whatsapp-button {
+    position: fixed;
+    bottom: 30px;
+    right: 30px;
+    z-index: 100;
+    background-color: transparent; /* Elimina el fondo verde del contenedor */
+    border: none; /* Asegúrate de que no haya borde en el contenedor */
+    padding: 0; /* Elimina el padding si no es necesario */
+    border-radius: 0; /* Asegúrate de que el contenedor no tenga bordes redondeados */
+}
+
+.whatsapp-button img {
+    width: 50px;
+    height: 50px;
+    /* Si deseas un borde redondeado para el logo, puedes agregarlo aquí */
+    border-radius: 0; /* Elimina cualquier borde redondeado del logo */
+}
+        /* Ocultar secciones según el idioma */
+        .lang-es {
+            display: block;
+        }
+
+        .lang-en {
+            display: none;
+        }
+
+
+    </style>
+</head>
+
+<body>
+
+    <!-- Menú de Navegación -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
+        <div class="container">
+            <a class="navbar-brand" href="#">ERG COMEX</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Alternar navegación">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <!-- Selector de Idioma -->
+            <div class="d-flex">
+                <select id="languageSwitcher" class="form-select form-select-sm">
+                    <option value="es">Español</option>
+                    <option value="en">English</option>
+                </select>
+                
+            </div>
+            
+            <div>
+                <img class="logo" src="./img/page_1_cropped_more (1).png" alt="logo">
+            </div>
+            <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+                <ul class="navbar-nav" id="navLinks">
+                    <li class="nav-item">
+                        <a class="nav-link" href="#nosotros">Nuestra Empresa</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#servicios">Servicios</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#contacto">Contacto</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#cotizacion">Solicitar Cotización</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+      
+    </nav>
+
+    <!-- Banner -->
+    <section class="banner">
+        <div class="container">
+            <h1 class="display-4 lang-es">Bienvenido a ERG COMEX</h1>
+            <h1 class="display-4 lang-en">Welcome to ERG COMEX</h1>
+            <p class="lead lang-es colorP">Soluciones en Comercio Exterior</p>
+            <p class="lead lang-en">Solutions in Foreign Trade</p>
+        </div>
+    </section>
+
+    <!-- Sección Quiénes Somos -->
+<section class="py-5" id="nosotros">
+    <div class="container">
+        <div class="row d-flex align-items-center">
+            <!-- Columna del texto -->
+            <div class="col-md-6">
+                <h2 data-aos="fade-right" class="section-title lang-es" >¿Quiénes Somos?</h2>
+                <h2 class="section-title lang-en">Who We Are</h2>
+                <p class="lang-es">
+                    Somos una empresa concebida para optimizar sus operaciones de comercio exterior.
+                    Somos soluciones, calidad y seguridad.
+                    El estudio ERG COMEX ha sido creado con el objetivo de ser una empresa dedicada exclusivamente
+                    a lidear con operaciones internacionales y ser para nuestros clientes la mayor solución integral de
+                    sus operaciones de Comex, brindando el mejor asesoramiento de gestiones extra aduaneras y aduaneras
+                    e información legislativa de comercio exterior. Día a día, brindamos servicios de excelencia a distintos
+                    operadores del rubro en todo el país, lo que nos ha posicionado como referentes más confiables.
+                    transparente y seguro en la prestación de servicios dentro del comercio internacional.
+                </p>
+                <p class="lang-en">
+                    We are a company designed to optimize your foreign trade operations. We are solutions, quality and security.
+                    The ERG COMEX studio has been created with the objective of being a company dedicated exclusively
+                    to dealing with international operations and to be for our clients the largest comprehensive solution
+                    for their Comex operations, providing the best advice on extra-customs and customs procedures
+                    and legislative information on foreign trade. Day by day, we provide excellent services to different operators
+                    in the sector throughout the country, which has positioned us as the most reliable references.
+                </p>
+            </div>
+
+            <!-- Columna de la imagen -->
+            <div class="col-md-6">
+                <img src="./img/industrial-port-container-yard.jpg" alt="Imagen descriptiva" class="img-fluid full-height">
+            </div>
+        </div>
+    </div>
+</section>
+
+     <!-- Sección Vision -->
+    
+<section class="py-5 background" id="nosotros">
+    <div class="container">
+        <div class="row d-flex align-items-center">
+            <!-- Columna de la imagen -->
+            <div class="col-md-6">
+                <img src="./img/Comex transporte terrestre.jpg" alt="Imagen descriptiva" class="img-fluid full-height">
+            </div>
+
+            <!-- Columna del texto -->
+            <div class="col-md-6">
+                <h2 class="section-title lang-es">Vision</h2>
+                <h2 class="section-title lang-en">Vision</h2>
+                <p class="lang-es">
+                    Disminuir en forma considerable los costos operativos
+                    Informes y reportes automatizados en datos, gráficos o históricos.
+                    Trabajamos siempre un paso adelante de la operación.
+                    Control por parte del cliente de sus embarques.
+                    Información automatizada en tiempo real.
+                    Share Services.
+                    Minimizar los tiempos.
+                    Back office de Comex.
+                     
+                    
+
+                </p>
+                <p class="lang-en">
+                    
+                    Considerably reduce operating costs
+Automated reports and reports on data, graphs or history.
+We always work one step ahead of the operation.
+Control by the client of their shipments.
+Automated information in real time.
+Share Services.
+Minimize times.
+Comex back office.
+                </p>
+            </div>
+            
+        </div>
+    </div>
+</section>
+
+
+     <!-- Sección Valores -->
+      
+<section class="py-5" id="nosotros">
+    <div class="container">
+        <div class="row d-flex align-items-center">
+            <!-- Columna del texto -->
+            <div class="col-md-6">
+                <h2 class="section-title lang-es">Valores</h2>
+                <h2 class="section-title lang-en">values</h2>
+                <p class="lang-es">
+                    Entendemos el vínculo con los clientes como una asociación estratégica, que sobre la base de la mutua confianza, permite el crecimiento conjunto, por ende nos interesa poder mantener una relación duradera con nuestros clientes con el objetivo de satisfacer sus necesidades de la mejor manera y con el mayor profesionalismo. Consideramos que una de nuestras virtudes más significativas es el estar atentos a cualquier inquietud de nuestros clientes por más mínima que sea y a los cambios que se generan a nivel mundial y local, para poder ofrecer soluciones efectivas a las nuevas necesidades las 24hs.
+                </p>
+                <p class="lang-en">
+                    We understand the link with clients as a strategic association, which on the basis of mutual trust, allows joint growth, therefore we are interested in being able to maintain a lasting relationship with our clients with the aim of satisfying their needs in the best way and with the greatest professionalism. We consider that one of our most significant virtues is being attentive to any concern of our clients, no matter how minimal, and to the changes that are generated globally and locally, in order to be able to offer effective solutions to new needs 24 hours a day.
+                </p>
+            </div>
+
+            <!-- Columna de la imagen -->
+            <div class="col-md-6">
+                <img src="./img/industrial-port-container-yard.jpg" alt="Imagen descriptiva" class="img-fluid full-height">
+            </div>
+        </div>
+    </div>
+</section>
+   <!-- Sección Servicios -->
+   <section class="py-5" id="servicios">
+    <div class="container">
+        <h2 class="text-center section-title lang-es">Servicios</h2>
+        <h2 class="text-center section-title lang-en">Services</h2>
+        <div class="row">
+            <!-- Servicio: Despachante de Aduana -->
+            <div class="col-md-4 mb-4">
+                <div class="card service-card">
+                    <div class="card-body">
+                        <h3 class="lang-es">Despachante de Aduana</h3>
+                        <h3 class="lang-en">Customs Broker</h3>
+                        <p class="lang-es">Descripción del servicio de despachante de aduana.</p>
+                        <p class="lang-en">Description of customs broker service.</p>
+                        <p class="lang-es"><strong>Costo de Asesoría / Honorarios:</strong> $XXX (consultar por tarifas actualizadas).</p>
+                        <p class="lang-en"><strong>Consulting Fee / Brokerage Fees:</strong> $XXX (check for updated rates).</p>
+                        <p class="lang-es"><strong>Actualizaciones:</strong> Incluye acceso a webinars y actualizaciones de la normativa AFIP.</p>
+                        <p class="lang-en"><strong>Updates:</strong> Includes access to webinars and AFIP regulation updates.</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Servicio: Agente de Transporte Aduanero -->
+            <div class="col-md-4 mb-4">
+                <div class="card service-card">
+                    <div class="card-body">
+                        <h3 class="lang-es">Agente de Transporte Aduanero</h3>
+                        <h3 class="lang-en">Customs Transport Agent</h3>
+                        <p class="lang-es">Descripción del servicio de agente de transporte aduanero.</p>
+                        <p class="lang-en">Description of customs transport agent service.</p>
+                        <p class="lang-es"><strong>Costo de Asesoría / Honorarios:</strong> $XXX (consultar por tarifas actualizadas).</p>
+                        <p class="lang-en"><strong>Consulting Fee / Brokerage Fees:</strong> $XXX (check for updated rates).</p>
+                        <p class="lang-es"><strong>Actualizaciones:</strong> Incluye acceso a webinars y actualizaciones de la normativa AFIP.</p>
+                        <p class="lang-en"><strong>Updates:</strong> Includes access to webinars and AFIP regulation updates.</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Servicio: Importación / Exportación -->
+            <div class="col-md-4 mb-4">
+                <div class="card service-card">
+                    <div class="card-body">
+                        <h3 class="lang-es">Importación / Exportación</h3>
+                        <h3 class="lang-en">Import / Export</h3>
+                        <p class="lang-es">Descripción del servicio de importación y exportación.</p>
+                        <p class="lang-en">Description of import and export service.</p>
+                        <p class="lang-es"><strong>Costo de Asesoría / Honorarios:</strong> $XXX (consultar por tarifas actualizadas).</p>
+                        <p class="lang-en"><strong>Consulting Fee / Brokerage Fees:</strong> $XXX (check for updated rates).</p>
+                        <p class="lang-es"><strong>Actualizaciones:</strong> Incluye acceso a webinars y actualizaciones de la normativa AFIP.</p>
+                        <p class="lang-en"><strong>Updates:</strong> Includes access to webinars and AFIP regulation updates.</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Servicio: Transporte Internacional -->
+            <div class="col-md-4 mb-4">
+                <div class="card service-card">
+                    <div class="card-body">
+                        <h3 class="lang-es">Transporte Internacional</h3>
+                        <h3 class="lang-en">International Transport</h3>
+                        <p class="lang-es">Descripción del servicio de transporte internacional.</p>
+                        <p class="lang-en">Description of international transport service.</p>
+                        <p class="lang-es"><strong>Costo de Asesoría / Honorarios:</strong> $XXX (consultar por tarifas actualizadas).</p>
+                        <p class="lang-en"><strong>Consulting Fee / Brokerage Fees:</strong> $XXX (check for updated rates).</p>
+                        <p class="lang-es"><strong>Actualizaciones:</strong> Incluye acceso a webinars y actualizaciones de la normativa AFIP.</p>
+                        <p class="lang-en"><strong>Updates:</strong> Includes access to webinars and AFIP regulation updates.</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Servicio: Búsqueda de Proveedores en el Exterior -->
+            <div class="col-md-4 mb-4">
+                <div class="card service-card">
+                    <div class="card-body">
+                        <h3 class="lang-es">Búsqueda de Proveedores en el Exterior</h3>
+                        <h3 class="lang-en">Search for Foreign Suppliers</h3>
+                        <p class="lang-es">Descripción del servicio de búsqueda de proveedores en el exterior.</p>
+                        <p class="lang-en">Description of search for foreign suppliers service.</p>
+                        <p class="lang-es"><strong>Costo de Asesoría / Honorarios:</strong> $XXX (consultar por tarifas actualizadas).</p>
+                        <p class="lang-en"><strong>Consulting Fee / Brokerage Fees:</strong> $XXX (check for updated rates).</p>
+                        <p class="lang-es"><strong>Actualizaciones:</strong> Incluye acceso a webinars y actualizaciones de la normativa AFIP.</p>
+                        <p class="lang-en"><strong>Updates:</strong> Includes access to webinars and AFIP regulation updates.</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Servicio: Verificación de Fábricas -->
+            <div class="col-md-4 mb-4">
+                <div class="card service-card">
+                    <div class="card-body">
+                        <h3 class="lang-es">Verificación de Fábricas</h3>
+                        <h3 class="lang-en">Factory Verification</h3>
+                        <p class="lang-es">Descripción del servicio de verificación de fábricas.</p>
+                        <p class="lang-en">Description of factory verification service.</p>
+                        <p class="lang-es"><strong>Costo de Asesoría / Honorarios:</strong> $XXX (consultar por tarifas actualizadas).</p>
+                        <p class="lang-en"><strong>Consulting Fee / Brokerage Fees:</strong> $XXX (check for updated rates).</p>
+                        <p class="lang-es"><strong>Actualizaciones:</strong> Incluye acceso a webinars y actualizaciones de la normativa AFIP.</p>
+                        <p class="lang-en"><strong>Updates:</strong> Includes access to webinars and AFIP regulation updates.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+<!-- Sección Contacto -->
+<section class="py-5" id="contacto">
+    <div class="container">
+        <div class="row">
+            <!-- Columna de información de contacto -->
+            <div class="col-md-6 d-flex align-items-stretch">
+                <div class="contact-info">
+                    <h2 class="section-title lang-es colorContact">Contacto</h2>
+                    <h2 class="section-title lang-en">Contact</h2>
+                    <p class="lang-es"><i class="fa fa-map-marker-alt"></i> <strong>Ubicación:</strong> San Juan 2312 Piso 6 Oficina 3</p>
+                    <p class="lang-en"><i class="fa fa-map-marker-alt"></i> <strong>Location:</strong> San Juan 2312 Piso 6 Oficina 3</p>
+                    <p class="lang-es"><i class="fa fa-phone"></i> <strong>Celular comercial:</strong> +54 9 341 258-1898 / +54 9 3492 31-1575</p>
+                    <p class="lang-en"><i class="fa fa-phone"></i> <strong>Commercial Cell:</strong> +54 9 341 258-1898 / +54 9 3492 31-1575</p>
+                    <p class="lang-es"><i class="fa fa-phone"></i> <strong>Celular de Gerencia:</strong> +54 9 341 502-0715</p>
+                    <p class="lang-en"><i class="fa fa-phone"></i> <strong>Management Cell:</strong> +54 9 341 502-0715</p>
+                    <p class="lang-es"><i class="fa fa-envelope"></i> <strong>Área Importación:</strong> celeste.rapuzzi@ergcomex.com</p>
+                    <p class="lang-en"><i class="fa fa-envelope"></i> <strong>Import Area:</strong> celeste.rapuzzi@ergcomex.com</p>
+                    <p class="lang-es"><i class="fa fa-envelope"></i> <strong>Área Exportación:</strong> alessandro.boretto@ergcomex.com</p>
+                    <p class="lang-en"><i class="fa fa-envelope"></i> <strong>Export Area:</strong> alessandro.boretto@ergcomex.com</p>
+                    <p class="lang-es"><i class="fa fa-envelope"></i> <strong>Email Gerencial:</strong> egerbasi@ergcomex.com</p>
+                    <p class="lang-en"><i class="fa fa-envelope"></i> <strong>Management Email:</strong> egerbasi@ergcomex.com</p>
+                </div>
+            </div>
+            <!-- Columna del mapa -->
+            <div class="col-md-6 d-flex align-items-stretch">
+                <div class="map w-100">
+                    <!-- Aquí debes incluir el iframe del mapa -->
+                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d26785.40261058915!2d-60.680783082260206!3d-32.946380192476354!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x95b7ab6f3a75f9e5%3A0x38ef8ca71671ed9!2sSan%20Juan%202312%2C%20S2000OUD%20Rosario%2C%20Santa%20Fe!5e0!3m2!1ses-419!2sar!4v1726771706119!5m2!1ses-419!2sar" width="100%" height="100%" style="border-radius:10px;" allowfullscreen="" loading="lazy"></iframe>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+
+
+
+
+    <!-- Sección Solicitar Cotización -->
+    <section class="py-5 text-center" id="cotizacion">
+        <div class="container">
+            <h2 class="section-title lang-es">Solicitar Cotización</h2>
+            <h2 class="section-title lang-en">Request a Quote</h2>
+            <p class="lang-es text-content">¿Quieres conocer el costo exacto de nuestros servicios? Contáctanos por WhatsApp y obtén tu respuesta al instante.</p>
+            <p class="lang-en text-content">Do you want to know the exact cost of our services? Contact us on WhatsApp and get your response instantly.</p>
+            <a href="https://wa.me/5493415020715" target="_blank" class="btn btn-success btn-lg">
+                <i class="bi bi-whatsapp"></i> <span class="lang-es">Contactar por WhatsApp</span><span class="lang-en">Contact via WhatsApp</span>
+            </a>
+        </div>
+    </section>
+
+    <!-- Botón flotante de WhatsApp -->
+    <a href="https://wa.me/5493415020715" target="_blank" class="whatsapp-button">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/5/5e/WhatsApp_icon.png" alt="WhatsApp">
+    </a>
+
+    <!-- Pie de Página -->
+    <footer>
+        <div class="container">
+            <p>&copy; 2023 ERG COMEX. <span class="lang-es">Todos los derechos reservados.</span> <span class="lang-en">All rights reserved.</span></p>
+        </div>
+    </footer>
+
+    <!-- Bootstrap JS y dependencias -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+
+    <!-- Iconos de Bootstrap -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
+
+    <!-- Script para cambiar de idioma -->
+    <script>
+        const languageSwitcher = document.getElementById('languageSwitcher');
+        const langEsElements = document.querySelectorAll('.lang-es');
+        const langEnElements = document.querySelectorAll('.lang-en');
+        const navLinks = document.getElementById('navLinks').getElementsByTagName('a');
+
+        languageSwitcher.addEventListener('change', (e) => {
+            const selectedLang = e.target.value;
+            if (selectedLang === 'en') {
+                langEsElements.forEach(el => el.style.display = 'none');
+                langEnElements.forEach(el => el.style.display = 'block');
+                navLinks[0].setAttribute('href', '#about');
+                navLinks[0].textContent = 'About Us';
+                navLinks[1].setAttribute('href', '#services');
+                navLinks[1].textContent = 'Services';
+                navLinks[2].setAttribute('href', '#contact');
+                navLinks[2].textContent = 'Contact';
+                navLinks[3].setAttribute('href', '#quote');
+                navLinks[3].textContent = 'Request a Quote';
+            } else {
+                langEsElements.forEach(el => el.style.display = 'block');
+                langEnElements.forEach(el => el.style.display = 'none');
+                navLinks[0].setAttribute('href', '#nosotros');
+                navLinks[0].textContent = 'Nuestra Empresa';
+                navLinks[1].setAttribute('href', '#servicios');
+                navLinks[1].textContent = 'Servicios';
+                navLinks[2].setAttribute('href', '#contacto');
+                navLinks[2].textContent = 'Contacto';
+                navLinks[3].setAttribute('href', '#cotizacion');
+                navLinks[3].textContent = 'Solicitar Cotización';
+            }
+        });
+
+        
+    </script>
+</body>
+
+</html>
+
+    
