@@ -58,6 +58,7 @@ p {
     margin-bottom: 1em; /* Espaciado inferior */
     line-height: 1.6; /* Altura de línea para mejorar la legibilidad */
     color: #2c3e50; /* Color de texto de párrafos */
+   
 }
 
 /* Estilo para enlaces */
@@ -78,25 +79,102 @@ a {
         }
 
         .banner {
-            background-image: url('./img/logistics-transportation-container-cargo-ship-cargo-plane-with-working-crane-bridge-shipyard-sunrise-logistic-import-export-transport-industry-background-ai-generative.jpg'); 
-            background-size: cover;
-            background-position: center;
-            color: #fff;
-            text-align: center;
-            padding: 150px 20px;
-        }
+    position: relative; 
+    background-image: url('./img/logistics-transportation-container-cargo-ship-cargo-plane-with-working-crane-bridge-shipyard-sunrise-logistic-import-export-transport-industry-background-ai-generative.jpg'); 
+    background-size: cover;
+    background-position: center;
+    color: #fff;
+    text-align: center;
+    padding: 150px 20px;
+    overflow: hidden; 
+}
 
-        .logo {
-            
-            height: 70px;
-            border-radius: 25px;
-            margin-left: 15px;
-          
-        }
+.banner::before {
+    content: ''; 
+    position: absolute; 
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0; 
+    background-color: rgba(0, 0, 0, 0.5); 
+    z-index: 1; 
+}
+
+.banner h1, .banner p {
+    position: relative; 
+    z-index: 2; 
+}
+
+
+
+
+
+        .banner .container {
+    display: flex;
+    flex-direction: column; /* Cambia a columna si el texto y la imagen deben estar uno debajo del otro */
+    align-items: center; /* Centra los elementos en el contenedor */
+}
+
+
+
+.text-image-wrapper {
+    display: flex; 
+    align-items: center; 
+    justify-content: space-between; /* Espacio entre los elementos */
+    margin-top: 20px; 
+}
+
+.text-container {
+    text-align: center; /* Centra el texto dentro del contenedor */
+    flex-grow: 1; /* Permite que el contenedor de texto ocupe el espacio disponible */
+}
+
+.vectorLogo {
+    width: 200px; 
+    height: auto; 
+    margin-left: 20px; /* Ajusta este valor según sea necesario */
+    z-index: 2;
+    
+}
+
+.colorH1Banner {
+    margin-bottom: 5px; /* Ajusta este valor según sea necesario */
+    color: #ffffff;
+}
+
+.lead {
+    margin-top: 0; /* Elimina margen superior */
+    margin-bottom: 10px; /* Ajusta el margen inferior si lo deseas */
+}
+/* Media query para pantallas más pequeñas */
+@media (max-width: 768px) {
+    .text-image-wrapper {
+        flex-direction: column; /* Cambia la dirección a columna */
+        align-items: center; /* Centra el contenido */
+    }
+
+    .text-container {
+        margin-right: 0; /* Elimina margen derecho */
+        margin-bottom: 10px; /* Añade espacio entre el párrafo y el vector */
+    }
+
+    
+}
+
+
+   
+.vectorLogo {
+    width: 200px; 
+    height: auto; 
+    z-index: 2;
+}
+
 
         .colorP {
             color: #ffffff;
             font-weight: bold;
+            z-index: 1;
+            top: -20px;
             
         }
     .colorContact {
@@ -250,9 +328,7 @@ a {
                 
             </div>
             
-            <div>
-                <img class="logo" src="./img/page_1_cropped_more (1).png" alt="logo">
-            </div>
+            
             <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
                 <ul class="navbar-nav" id="navLinks">
                     <li class="nav-item">
@@ -273,15 +349,32 @@ a {
       
     </nav>
 
-    <!-- Banner -->
-    <section class="banner">
-        <div class="container">
-            <h1 class="display-4 lang-es">Bienvenido a ERG COMEX</h1>
-            <h1 class="display-4 lang-en">Welcome to ERG COMEX</h1>
-            <p class="lead lang-es colorP">Soluciones en Comercio Exterior</p>
-            <p class="lead lang-en">Solutions in Foreign Trade</p>
+
+
+
+<!-- Banner -->
+<section class="banner">
+    <div class="container">
+        <h1 class="display-4 lang-es colorH1Banner">Bienvenido a ERG COMEX</h1>
+        <h1 class="display-4 lang-en colorH1Banner">Welcome to ERG COMEX</h1>
+        
+        <div class="text-image-wrapper">
+            <div class="text-container lang-es">
+                <p class="lead colorP">Soluciones en Comercio Exterior</p>
+            </div>
+            <div class="text-container lang-en">
+                <p class="lead colorP">Solutions in Foreign Trade</p>
+            </div>
+            <img src="./img/page_1_cropped_more (1)-vector-terminado.png" alt="vectorLogo" class="vectorLogo">
         </div>
-    </section>
+    </div>
+</section>
+
+
+
+
+
+
 
     <!-- Sección Quiénes Somos -->
 <section class="py-5" id="nosotros">
@@ -289,7 +382,7 @@ a {
         <div class="row d-flex align-items-center">
             <!-- Columna del texto -->
             <div class="col-md-6">
-                <h2 data-aos="fade-right" class="section-title lang-es" >¿Quiénes Somos?</h2>
+                <h2  class="section-title lang-es" >¿Quiénes Somos?</h2>
                 <h2 class="section-title lang-en">Who We Are</h2>
                 <p class="lang-es">
                     Somos una empresa concebida para optimizar sus operaciones de comercio exterior.
