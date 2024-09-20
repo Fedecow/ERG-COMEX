@@ -130,9 +130,9 @@ a {
 }
 
 .vectorLogo {
-    width: 200px; 
+    width: 65px; 
     height: auto; 
-    margin-left: 20px; /* Ajusta este valor según sea necesario */
+    
     z-index: 2;
     
 }
@@ -171,7 +171,6 @@ a {
 
         .colorP {
             color: #ffffff;
-            font-weight: bold;
             z-index: 1;
             top: -20px;
             
@@ -255,28 +254,28 @@ a {
 /* Estilo base para los párrafos dentro de las tarjetas */
 .service-card p {
     margin-bottom: 15px;
-    color: #464d50; /* Texto principal */
+    color: #464d50; 
 }
 
 .service-card strong {
-    color: #464d50; /* Color para los textos destacados */
+    color: #464d50; 
 }
 
 /* Estilos adicionales para los títulos dentro del cuerpo */
 .service-card .card-body h3 {
-    color: #7d8dc4; /* Color de los encabezados dentro del cuerpo */
+    color: #7d8dc4; 
 }
 
 
           /* Estilos para la sección de contacto */
           #contacto {
-            background-color: #182c44; /* Fondo de la sección */
-            color: #cfd3d9; /* Color del texto */
+            background-color: #182c44; 
+            color: #cfd3d9; 
         }
 
         
         .contact-info p {
-            color: #cfd3d9; /* Color del texto dentro de la sección de contacto */
+            color: #cfd3d9; 
         }
 
         .section-title {
@@ -291,10 +290,10 @@ a {
 
         
         .text-content {
-            font-family: 'Arial', sans-serif; /* Tipo de fuente */
-    font-size: 16px; /* Tamaño de fuente */
-    line-height: 1.5; /* Altura de línea */
-    color: #333; /* Color del texto */
+            font-family: 'Arial', sans-serif; 
+    font-size: 16px; 
+    line-height: 1.5; 
+    color: #333; 
     margin: 20px;
     
     font-weight: bold;
@@ -313,17 +312,17 @@ a {
     bottom: 30px;
     right: 30px;
     z-index: 100;
-    background-color: transparent; /* Elimina el fondo verde del contenedor */
-    border: none; /* Asegúrate de que no haya borde en el contenedor */
-    padding: 0; /* Elimina el padding si no es necesario */
-    border-radius: 0; /* Asegúrate de que el contenedor no tenga bordes redondeados */
+    background-color: transparent; 
+    border: none; 
+    padding: 0; 
+    border-radius: 0; 
 }
 
 .whatsapp-button img {
     width: 50px;
     height: 50px;
-    /* Si deseas un borde redondeado para el logo, puedes agregarlo aquí */
-    border-radius: 0; /* Elimina cualquier borde redondeado del logo */
+    
+    border-radius: 0; 
 }
         /* Ocultar secciones según el idioma */
         .lang-es {
@@ -340,43 +339,68 @@ a {
 
 <body>
 
-    <!-- Menú de Navegación -->
-    <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
-        <div class="container">
-            <a class="navbar-brand" href="#">ERG COMEX</a>
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Alternar navegación">
-                <span class="navbar-toggler-icon"></span>
-            </button>
+<!-- Menú de Navegación -->
+<nav class="navbar navbar-expand-lg navbar-light bg-light fixed-top">
+    <div class="container">
+        <!-- Logo de la empresa -->
+        <a class="navbar-brand d-flex align-items-center" href="#">
+            <img src="./img/page_1_cropped_more (1)-vector-terminado.png" alt="vectorLogo" class="vectorLogo" style="width: 65px; margin-right: 10px;">
+            ERG COMEX
+        </a>
+        
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Alternar navegación">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        
+        <div class="d-flex align-items-center ms-auto">
+    <div class="dropdown">
+        <button id="languageButton" class="btn btn-dark dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" style="border-radius: 30px; padding: 5px 15px; font-size: 0.875rem;">
+            <img src="./img/vectorWww.png" alt="Icono" id="worldIcon" style="width: 15px; margin-right: 5px; filter: brightness(0) invert(1);">
+            <span id="languageText" style="color: white;">Español</span>
+        </button>
+        <ul class="dropdown-menu" aria-labelledby="languageDropdown">
+            <li><a class="dropdown-item" href="#" onclick="setLanguage('es')">Español</a></li>
+            <li><a class="dropdown-item" href="#" onclick="setLanguage('en')">English</a></li>
+        </ul>
+    </div>
+</div>
 
-            <!-- Selector de Idioma -->
-            <div class="d-flex">
-                <select id="languageSwitcher" class="form-select form-select-sm">
-                    <option value="es">Español</option>
-                    <option value="en">English</option>
-                </select>
-                
-            </div>
-            
-            
-            <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
-                <ul class="navbar-nav" id="navLinks">
-                    <li class="nav-item">
-                        <a class="nav-link" href="#nosotros">Nuestra Empresa</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#servicios">Servicios</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#contacto">Contacto</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#cotizacion">Solicitar Cotización</a>
-                    </li>
-                </ul>
-            </div>
+        
+        <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+            <ul class="navbar-nav" id="navLinks">
+                <li class="nav-item">
+                    <a class="nav-link" href="#nosotros">Nuestra Empresa</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#servicios">Servicios</a></li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#contacto">Contacto</a></li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#cotizacion">Solicitar Cotización</a></li>
+            </ul>
         </div>
-      
-    </nav>
+    </div>
+</nav>
+
+
+
+
+
+
+
+
+<!-- Estilo adicional para los enlaces del menú -->
+<style>
+    .navbar-nav .nav-link {
+        color: #464d50; 
+    }
+    
+    .navbar-nav .nav-link:hover {
+        color: #7d8dc4; 
+    }
+</style>
+
+
 
 
 
@@ -393,9 +417,7 @@ a {
             </div>
             <div class="text-container lang-en">
                 <p class="lead colorP">Solutions in Foreign Trade</p>
-            </div>
-            <img src="./img/page_1_cropped_more (1)-vector-terminado.png" alt="vectorLogo" class="vectorLogo">
-        </div>
+            
     </div>
 </section>
 
@@ -678,41 +700,64 @@ a {
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
 
     <!-- Script para cambiar de idioma -->
-    <script>
-        const languageSwitcher = document.getElementById('languageSwitcher');
-        const langEsElements = document.querySelectorAll('.lang-es');
-        const langEnElements = document.querySelectorAll('.lang-en');
-        const navLinks = document.getElementById('navLinks').getElementsByTagName('a');
+    <!-- JavaScript para cambiar el texto del botón de idioma y los enlaces -->
+<script>
+    function setLanguage(language) {
+        var languageText = document.getElementById("languageText");
+        var langEsElements = document.querySelectorAll('.lang-es');
+        var langEnElements = document.querySelectorAll('.lang-en');
+        var navLinks = document.getElementById('navLinks').getElementsByTagName('a');
 
-        languageSwitcher.addEventListener('change', (e) => {
-            const selectedLang = e.target.value;
-            if (selectedLang === 'en') {
-                langEsElements.forEach(el => el.style.display = 'none');
-                langEnElements.forEach(el => el.style.display = 'block');
-                navLinks[0].setAttribute('href', '#about');
-                navLinks[0].textContent = 'About Us';
-                navLinks[1].setAttribute('href', '#services');
-                navLinks[1].textContent = 'Services';
-                navLinks[2].setAttribute('href', '#contact');
-                navLinks[2].textContent = 'Contact';
-                navLinks[3].setAttribute('href', '#quote');
-                navLinks[3].textContent = 'Request a Quote';
-            } else {
-                langEsElements.forEach(el => el.style.display = 'block');
-                langEnElements.forEach(el => el.style.display = 'none');
-                navLinks[0].setAttribute('href', '#nosotros');
-                navLinks[0].textContent = 'Nuestra Empresa';
-                navLinks[1].setAttribute('href', '#servicios');
-                navLinks[1].textContent = 'Servicios';
-                navLinks[2].setAttribute('href', '#contacto');
-                navLinks[2].textContent = 'Contacto';
-                navLinks[3].setAttribute('href', '#cotizacion');
-                navLinks[3].textContent = 'Solicitar Cotización';
+        if (language === 'es') {
+            // Cambiar el texto del botón
+            languageText.textContent = 'Español';
+
+            // Mostrar/ocultar elementos en español/inglés
+            langEsElements.forEach(el => el.style.display = 'block');
+            langEnElements.forEach(el => el.style.display = 'none');
+            
+            // Cambiar los enlaces y textos del menú a español
+            navLinks[0].setAttribute('href', '#nosotros');
+            navLinks[0].textContent = 'Nuestra Empresa';
+            navLinks[1].setAttribute('href', '#servicios');
+            navLinks[1].textContent = 'Servicios';
+            navLinks[2].setAttribute('href', '#contacto');
+            navLinks[2].textContent = 'Contacto';
+            navLinks[3].setAttribute('href', '#cotizacion');
+            navLinks[3].textContent = 'Solicitar Cotización';
+        } else if (language === 'en') {
+            // Cambiar el texto del botón
+            languageText.textContent = 'English';
+
+            // Mostrar/ocultar elementos en español/inglés
+            langEsElements.forEach(el => el.style.display = 'none');
+            langEnElements.forEach(el => el.style.display = 'block');
+
+            // Cambiar los enlaces y textos del menú a inglés
+            navLinks[0].setAttribute('href', '#about');
+            navLinks[0].textContent = 'About Us';
+            navLinks[1].setAttribute('href', '#services');
+            navLinks[1].textContent = 'Services';
+            navLinks[2].setAttribute('href', '#contact');
+            navLinks[2].textContent = 'Contact';
+            navLinks[3].setAttribute('href', '#quote');
+            navLinks[3].textContent = 'Request a Quote';
+        }
+    }
+
+    // Inicialización del selector para que funcione al cambiar idioma
+    document.querySelectorAll('.dropdown-item').forEach(item => {
+        item.addEventListener('click', (e) => {
+            const selectedLanguage = e.target.textContent;
+            if (selectedLanguage === 'Español') {
+                setLanguage('es');
+            } else if (selectedLanguage === 'English') {
+                setLanguage('en');
             }
         });
+    });
+</script>
 
-        
-    </script>
 </body>
 
 </html>
