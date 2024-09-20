@@ -160,15 +160,14 @@ a {
 
     
 }
-
+    .colorh2Vision{
+        color: #ffffff;
+    }
 
    
-.vectorLogo {
-    width: 200px; 
-    height: auto; 
-    z-index: 2;
-}
-
+     .colorParrafoVision {
+    color: #ffffff;
+     }
 
         .colorP {
             color: #ffffff;
@@ -180,65 +179,95 @@ a {
     .colorContact {
         color: #cfd3d9;
     }
-        /* Estilos para la sección de servicios */
+  /* Estilos para la sección de servicios */
 
-        .background {
-            background-color: #7d8dc4;
-        }
+.background {
+    background-color: #7d8dc4;
+}
 
-        
-
-        .full-height {
+.full-height {
     height: 100%; /* Asegura que la imagen ocupe todo el alto disponible */
     object-fit: cover; /* Ajusta la imagen dentro del espacio disponible */
     border-radius: 10px;
 }
 
+#servicios {
+    background-color: #ffffff; /* Fondo blanco */
+    padding-top: auto;
+}
 
-         #servicios {
-            background-color: #ffffff; /* Fondo blanco */
-            padding-top: auto;
-        }
-
-        
-
-        .service-card {
-            border: 1px solid #7d8dc4; /* Borde de la tarjeta */
-            border-radius: 10px;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-            background-color: #ffffff; /* Fondo de la tarjeta */
-        }
-
-        .service-card .card-body {
-            padding: 20px;
-            color: #464d50; /* Texto principal */
-        }
-
-        .service-card h3 {
-            color: #7d8dc4; /* Color de los encabezados */
-        }
-
-        .service-card p {
-            margin-bottom: 15px;
-        }
-
-        .card-body strong {
-            color: #464d50; /* Color para los textos destacados */
-        }
-
-        /* Estilo base para las tarjetas */
-.card.service-card {
+.service-card {
+    position: relative;
+    overflow: hidden;
+    border: 1px solid #7d8dc4; /* Borde de la tarjeta */
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    background-color: #ffffff; /* Fondo de la tarjeta */
     transition: transform 0.3s ease; /* Suaviza el cambio en la transformación */
     transform: scale(1); /* Tamaño original */
     cursor: pointer;
 }
 
-/* Efecto al pasar el mouse */
-.card.service-card:hover {
+/* Imagen de fondo ocupando toda la tarjeta */
+.card-image {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-size: cover;
+    background-position: center;
+    border-radius: 10px; /* Bordes redondeados como la tarjeta */
+    transition: opacity 0.3s ease;
+}
+
+/* Mostrar solo el título inicialmente sobre la imagen */
+.service-card h3 {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 1;
+    color: white;
+    text-align: center;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 1); /* Sombra para mejor legibilidad */
+    transition: opacity 0.3s ease;
+}
+
+/* Ocultar el contenido inicialmente */
+
+
+/* Efecto al pasar el mouse: ocultar imagen y título, mostrar contenido */
+.service-card:hover .card-image,
+.service-card:hover h3 {
+    opacity: 0; /* Desvanecer la imagen y el título */
+}
+
+.service-card:hover .card-body {
+    opacity: 1; /* Mostrar el contenido */
+}
+
+/* Efecto al pasar el mouse: ampliar la tarjeta */
+.service-card:hover {
     transform: scale(1.05); /* Ampliar la tarjeta un 5% */
 }
 
-        
+/* Estilo base para los párrafos dentro de las tarjetas */
+.service-card p {
+    margin-bottom: 15px;
+    color: #464d50; /* Texto principal */
+}
+
+.service-card strong {
+    color: #464d50; /* Color para los textos destacados */
+}
+
+/* Estilos adicionales para los títulos dentro del cuerpo */
+.service-card .card-body h3 {
+    color: #7d8dc4; /* Color de los encabezados dentro del cuerpo */
+}
+
+
           /* Estilos para la sección de contacto */
           #contacto {
             background-color: #182c44; /* Fondo de la sección */
@@ -414,47 +443,30 @@ a {
 
      <!-- Sección Vision -->
     
-<section class="py-5 background" id="nosotros">
-    <div class="container">
-        <div class="row d-flex align-items-center">
-            <!-- Columna de la imagen -->
-            <div class="col-md-6">
-                <img src="./img/Comex transporte terrestre.jpg" alt="Imagen descriptiva" class="img-fluid full-height">
+     <section class="py-5 background" id="nosotros">
+        <div class="container">
+            <div class="row d-flex align-items-center">
+                <!-- Columna de la imagen -->
+                <div class="col-md-6 order-md-1 order-2">
+                    <img src="./img/business-people-brainstorming-ideas-plan-work-report-with-data-charts-graphs-analyzing-research-information-create-successful-project-office-partnership-collaboration.jpg" alt="Imagen descriptiva" class="img-fluid full-height">
+                </div>
+    
+                <!-- Columna del texto -->
+                <div class="col-md-6 order-md-2 order-1">
+                    <h2 class="section-title lang-es colorh2Vision">Vision</h2>
+                    <h2 class="section-title lang-en">Vision</h2>
+                    <p class="lang-es colorParrafoVision">
+                        Nos especializamos en la reducción significativa de costos operativos a través de la implementación de informes y reportes automatizados que incluyen datos, gráficos y análisis históricos detallados. Nos anticipamos constantemente a las necesidades operativas de nuestros clientes, garantizando un control eficiente y proactivo.
+                        Ofrecemos supervisión en tiempo real, permitiendo a nuestros clientes monitorear sus embarques con información automatizada y siempre disponible. Además, proporcionamos servicios compartidos que optimizan al máximo los recursos, asegurando una gestión eficiente y ágil.
+                    </p>
+                    <p class="lang-en colorParrafoVision">
+                        We specialize in significantly reducing operating costs through the implementation of automated reports that include detailed historical data, graphs and analysis. We constantly anticipate the operational needs of our clients, guaranteeing efficient and proactive control.
+                        We offer real-time supervision, allowing our clients to monitor their shipments with automated and always available information. In addition, we provide shared services that optimize resources to the maximum, ensuring efficient and agile management.
+                    </p>
+                </div>
             </div>
-
-            <!-- Columna del texto -->
-            <div class="col-md-6">
-                <h2 class="section-title lang-es">Vision</h2>
-                <h2 class="section-title lang-en">Vision</h2>
-                <p class="lang-es">
-                    Disminuir en forma considerable los costos operativos
-                    Informes y reportes automatizados en datos, gráficos o históricos.
-                    Trabajamos siempre un paso adelante de la operación.
-                    Control por parte del cliente de sus embarques.
-                    Información automatizada en tiempo real.
-                    Share Services.
-                    Minimizar los tiempos.
-                    Back office de Comex.
-                     
-                    
-
-                </p>
-                <p class="lang-en">
-                    
-                    Considerably reduce operating costs
-Automated reports and reports on data, graphs or history.
-We always work one step ahead of the operation.
-Control by the client of their shipments.
-Automated information in real time.
-Share Services.
-Minimize times.
-Comex back office.
-                </p>
-            </div>
-            
         </div>
-    </div>
-</section>
+    </section>
 
 
      <!-- Sección Valores -->
@@ -476,41 +488,45 @@ Comex back office.
 
             <!-- Columna de la imagen -->
             <div class="col-md-6">
-                <img src="./img/industrial-port-container-yard.jpg" alt="Imagen descriptiva" class="img-fluid full-height">
+                <img src="./img/transport-logistics-concept.jpg" alt="Imagen descriptiva" class="img-fluid full-height">
             </div>
         </div>
     </div>
 </section>
+
+
    <!-- Sección Servicios -->
    <section class="py-5" id="servicios">
     <div class="container">
         <h2 class="text-center section-title lang-es">Servicios</h2>
         <h2 class="text-center section-title lang-en">Services</h2>
         <div class="row">
-            <!-- Servicio: Despachante de Aduana -->
-            <div class="col-md-4 mb-4">
-                <div class="card service-card">
-                    <div class="card-body">
-                        <h3 class="lang-es">Despachante de Aduana</h3>
-                        <h3 class="lang-en">Customs Broker</h3>
-                        <p class="lang-es">Descripción del servicio de despachante de aduana.</p>
-                        <p class="lang-en">Description of customs broker service.</p>
-                        <p class="lang-es"><strong>Costo de Asesoría / Honorarios:</strong> $XXX (consultar por tarifas actualizadas).</p>
-                        <p class="lang-en"><strong>Consulting Fee / Brokerage Fees:</strong> $XXX (check for updated rates).</p>
-                        <p class="lang-es"><strong>Actualizaciones:</strong> Incluye acceso a webinars y actualizaciones de la normativa AFIP.</p>
-                        <p class="lang-en"><strong>Updates:</strong> Includes access to webinars and AFIP regulation updates.</p>
-                    </div>
-                </div>
-            </div>
+           <!-- Servicio: Despachante de Aduana -->
+<div class="col-md-4 mb-4">
+    <div class="card service-card">
+        <div class="card-image" style="background-image: url('./img/people-taking-care-warehouse-logistics-together.jpg');"></div>
+        <div class="card-body">
+            <h3 class="lang-es">Despachante de Aduana</h3>
+            <h3 class="lang-en">Customs Broker</h3>
+            <p class="lang-es"> Facilitamos la gestión aduanera, asegurando que tus envíos cumplan con todas las normativas y evitando retrasos en el proceso.</p>
+            <p class="lang-en">We facilitate customs management, ensuring that your shipments comply with all regulations and avoiding delays in the process.</p>
+            <p class="lang-es"><strong>Costo de Asesoría / Honorarios:</strong> $XXX (consultar por tarifas actualizadas).</p>
+            <p class="lang-en"><strong>Consulting Fee / Brokerage Fees:</strong> $XXX (check for updated rates).</p>
+            <p class="lang-es"><strong>Actualizaciones:</strong> Incluye acceso a webinars y actualizaciones de la normativa AFIP.</p>
+            <p class="lang-en"><strong>Updates:</strong> Includes access to webinars and AFIP regulation updates.</p>
+        </div>
+    </div>
+</div>
 
             <!-- Servicio: Agente de Transporte Aduanero -->
             <div class="col-md-4 mb-4">
                 <div class="card service-card">
+                    <div class="card-image" style="background-image: url('./img/full-shot-man-carrying-box\ \(1\).jpg');"></div>
                     <div class="card-body">
                         <h3 class="lang-es">Agente de Transporte Aduanero</h3>
                         <h3 class="lang-en">Customs Transport Agent</h3>
-                        <p class="lang-es">Descripción del servicio de agente de transporte aduanero.</p>
-                        <p class="lang-en">Description of customs transport agent service.</p>
+                        <p class="lang-es">Nos encargamos de organizar el transporte de tus productos, garantizando que lleguen a su destino cumpliendo con las regulaciones.</p>
+                        <p class="lang-en">We take care of organizing the transportation of your products, guaranteeing that they reach their destination in compliance with regulations.</p>
                         <p class="lang-es"><strong>Costo de Asesoría / Honorarios:</strong> $XXX (consultar por tarifas actualizadas).</p>
                         <p class="lang-en"><strong>Consulting Fee / Brokerage Fees:</strong> $XXX (check for updated rates).</p>
                         <p class="lang-es"><strong>Actualizaciones:</strong> Incluye acceso a webinars y actualizaciones de la normativa AFIP.</p>
@@ -522,11 +538,12 @@ Comex back office.
             <!-- Servicio: Importación / Exportación -->
             <div class="col-md-4 mb-4">
                 <div class="card service-card">
+                    <div class="card-image" style="background-image: url('./img/AEREO\ COMEX\ 6.jpg');"></div>
                     <div class="card-body">
-                        <h3 class="lang-es">Importación / Exportación</h3>
-                        <h3 class="lang-en">Import / Export</h3>
-                        <p class="lang-es">Descripción del servicio de importación y exportación.</p>
-                        <p class="lang-en">Description of import and export service.</p>
+                        <h3 class="lang-es">Importación/Exportación</h3>
+                        <h3 class="lang-en">Import/Export</h3>
+                        <p class="lang-es">Te apoyamos en la importación y exportación de productos, manejando toda la documentación necesaria para un proceso sin complicaciones.</p>
+                        <p class="lang-en">We support you in the import and export of products, handling all the necessary documentation for a hassle-free process.</p>
                         <p class="lang-es"><strong>Costo de Asesoría / Honorarios:</strong> $XXX (consultar por tarifas actualizadas).</p>
                         <p class="lang-en"><strong>Consulting Fee / Brokerage Fees:</strong> $XXX (check for updated rates).</p>
                         <p class="lang-es"><strong>Actualizaciones:</strong> Incluye acceso a webinars y actualizaciones de la normativa AFIP.</p>
@@ -538,11 +555,12 @@ Comex back office.
             <!-- Servicio: Transporte Internacional -->
             <div class="col-md-4 mb-4">
                 <div class="card service-card">
+                    <div class="card-image" style="background-image: url('./img/transport-logistics-products.jpg');"></div>
                     <div class="card-body">
                         <h3 class="lang-es">Transporte Internacional</h3>
                         <h3 class="lang-en">International Transport</h3>
-                        <p class="lang-es">Descripción del servicio de transporte internacional.</p>
-                        <p class="lang-en">Description of international transport service.</p>
+                        <p class="lang-es">Conectamos tus productos con el mundo, brindando opciones flexibles y seguras para el transporte internacional, adaptadas a tus necesidades.</p>
+                        <p class="lang-en">We connect your products with the world, providing flexible and safe options for international transportation, adapted to your needs.</p>
                         <p class="lang-es"><strong>Costo de Asesoría / Honorarios:</strong> $XXX (consultar por tarifas actualizadas).</p>
                         <p class="lang-en"><strong>Consulting Fee / Brokerage Fees:</strong> $XXX (check for updated rates).</p>
                         <p class="lang-es"><strong>Actualizaciones:</strong> Incluye acceso a webinars y actualizaciones de la normativa AFIP.</p>
@@ -554,11 +572,12 @@ Comex back office.
             <!-- Servicio: Búsqueda de Proveedores en el Exterior -->
             <div class="col-md-4 mb-4">
                 <div class="card service-card">
+                    <div class="card-image" style="background-image: url('./img/business-people-working-data-project\ \(1\).jpg');"></div>
                     <div class="card-body">
                         <h3 class="lang-es">Búsqueda de Proveedores en el Exterior</h3>
-                        <h3 class="lang-en">Search for Foreign Suppliers</h3>
-                        <p class="lang-es">Descripción del servicio de búsqueda de proveedores en el exterior.</p>
-                        <p class="lang-en">Description of search for foreign suppliers service.</p>
+                        <h3 class="lang-en">Search for Suppliers Abroad</h3>
+                        <p class="lang-es">Identificamos y seleccionamos proveedores confiables en el extranjero, facilitando el acceso a productos de calidad y mejores precios para tu negocio.</p>
+                        <p class="lang-en">We identify and select reliable suppliers abroad, facilitating access to quality products and better prices for your business.</p>
                         <p class="lang-es"><strong>Costo de Asesoría / Honorarios:</strong> $XXX (consultar por tarifas actualizadas).</p>
                         <p class="lang-en"><strong>Consulting Fee / Brokerage Fees:</strong> $XXX (check for updated rates).</p>
                         <p class="lang-es"><strong>Actualizaciones:</strong> Incluye acceso a webinars y actualizaciones de la normativa AFIP.</p>
@@ -570,11 +589,12 @@ Comex back office.
             <!-- Servicio: Verificación de Fábricas -->
             <div class="col-md-4 mb-4">
                 <div class="card service-card">
+                    <div class="card-image" style="background-image: url('./img/woman-working-as-engineer\ \(1\).jpg');"></div>
                     <div class="card-body">
                         <h3 class="lang-es">Verificación de Fábricas</h3>
                         <h3 class="lang-en">Factory Verification</h3>
-                        <p class="lang-es">Descripción del servicio de verificación de fábricas.</p>
-                        <p class="lang-en">Description of factory verification service.</p>
+                        <p class="lang-es">Realizamos auditorías exhaustivas en fábricas, asegurando el cumplimiento de estándares de calidad y condiciones laborales para una producción confiable.</p>
+                        <p class="lang-en">We carry out exhaustive audits in factories, ensuring compliance with quality standards and working conditions for reliable production.</p>
                         <p class="lang-es"><strong>Costo de Asesoría / Honorarios:</strong> $XXX (consultar por tarifas actualizadas).</p>
                         <p class="lang-en"><strong>Consulting Fee / Brokerage Fees:</strong> $XXX (check for updated rates).</p>
                         <p class="lang-es"><strong>Actualizaciones:</strong> Incluye acceso a webinars y actualizaciones de la normativa AFIP.</p>
@@ -631,7 +651,7 @@ Comex back office.
         <div class="container">
             <h2 class="section-title lang-es">Solicitar Cotización</h2>
             <h2 class="section-title lang-en">Request a Quote</h2>
-            <p class="lang-es text-content">¿Quieres conocer el costo exacto de nuestros servicios? Contáctanos por WhatsApp y obtén tu respuesta al instante.</p>
+            <p class="lang-es text-content">¿Queres conocer el costo exacto de nuestros servicios? Contactanos por WhatsApp y obtene tu respuesta al instante.</p>
             <p class="lang-en text-content">Do you want to know the exact cost of our services? Contact us on WhatsApp and get your response instantly.</p>
             <a href="https://wa.me/5493415020715" target="_blank" class="btn btn-success btn-lg">
                 <i class="bi bi-whatsapp"></i> <span class="lang-es">Contactar por WhatsApp</span><span class="lang-en">Contact via WhatsApp</span>
