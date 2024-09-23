@@ -178,92 +178,59 @@ a {
     .colorContact {
         color: #cfd3d9;
     }
-  /* Estilos para la sección de servicios */
 
-.background {
+    .colorContactEn {
+        color: #cfd3d9;
+    }
+    .background {
     background-color: #7d8dc4;
 }
 
 .full-height {
-    height: 100%; /* Asegura que la imagen ocupe todo el alto disponible */
-    object-fit: cover; /* Ajusta la imagen dentro del espacio disponible */
+    height: 100%;
+    object-fit: cover;
     border-radius: 10px;
 }
 
 #servicios {
-    background-color: #ffffff; /* Fondo blanco */
+    background-color: #ffffff;
     padding-top: auto;
 }
 
 .service-card {
     position: relative;
     overflow: hidden;
-    border: 1px solid #7d8dc4; /* Borde de la tarjeta */
+    border: 1px solid #7d8dc4;
     border-radius: 10px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    background-color: #ffffff; /* Fondo de la tarjeta */
-    transition: transform 0.3s ease; /* Suaviza el cambio en la transformación */
-    transform: scale(1); /* Tamaño original */
+    background-color: #ffffff;
+    transition: transform 0.3s ease;
+    transform: scale(1);
     cursor: pointer;
 }
 
-/* Imagen de fondo ocupando toda la tarjeta */
-.card-image {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background-size: cover;
-    background-position: center;
-    border-radius: 10px; /* Bordes redondeados como la tarjeta */
-    transition: opacity 0.3s ease;
-}
-
-/* Mostrar solo el título inicialmente sobre la imagen */
 .service-card h3 {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    z-index: 1;
-    color: white;
+    color: #7d8dc4;
     text-align: center;
-    text-shadow: 2px 2px 4px rgba(0, 0, 0, 1); /* Sombra para mejor legibilidad */
-    transition: opacity 0.3s ease;
+    padding: 20px 0;
 }
 
-/* Ocultar el contenido inicialmente */
-
-
-/* Efecto al pasar el mouse: ocultar imagen y título, mostrar contenido */
-.service-card:hover .card-image,
-.service-card:hover h3 {
-    opacity: 0; /* Desvanecer la imagen y el título */
+.service-card .card-body {
+    opacity: 1;
+    padding: 20px;
 }
 
-.service-card:hover .card-body {
-    opacity: 1; /* Mostrar el contenido */
-}
-
-/* Efecto al pasar el mouse: ampliar la tarjeta */
-.service-card:hover {
-    transform: scale(1.05); /* Ampliar la tarjeta un 5% */
-}
-
-/* Estilo base para los párrafos dentro de las tarjetas */
 .service-card p {
     margin-bottom: 15px;
-    color: #464d50; 
+    color: #464d50;
 }
 
 .service-card strong {
-    color: #464d50; 
+    color: #464d50;
 }
 
-/* Estilos adicionales para los títulos dentro del cuerpo */
-.service-card .card-body h3 {
-    color: #7d8dc4; 
+.service-card:hover {
+    transform: scale(1.05);
 }
 
 
@@ -436,22 +403,17 @@ a {
                 <h2  class="section-title lang-es" >¿Quiénes Somos?</h2>
                 <h2 class="section-title lang-en">Who We Are</h2>
                 <p class="lang-es">
-                    Somos una empresa concebida para optimizar sus operaciones de comercio exterior.
-                    Somos soluciones, calidad y seguridad.
-                    El estudio ERG COMEX ha sido creado con el objetivo de ser una empresa dedicada exclusivamente
-                    a lidear con operaciones internacionales y ser para nuestros clientes la mayor solución integral de
-                    sus operaciones de Comex, brindando el mejor asesoramiento de gestiones extra aduaneras y aduaneras
-                    e información legislativa de comercio exterior. Día a día, brindamos servicios de excelencia a distintos
-                    operadores del rubro en todo el país, lo que nos ha posicionado como referentes más confiables.
-                    transparente y seguro en la prestación de servicios dentro del comercio internacional.
+                    Somos una empresa concebida para optimizar sus operaciones de comercio exterior. 
+                    Ofrecemos soluciones, calidad y seguridad. 
+                    ERG COMEX ha sido creado con el objetivo de dedicarse exclusivamente a gestionar operaciones internacionales, siendo para nuestros clientes una solución integral en sus operaciones de comercio exterior. Brindamos el mejor asesoramiento en gestiones extra aduaneras e información legislativa sobre comercio exterior. 
+                    Día a día, ofrecemos servicios de excelencia a distintos operadores del rubro en todo el país, lo que nos ha posicionado como una de las referencias más confiables, transparentes y seguras en la prestación de servicios dentro del comercio internacional.
+
                 </p>
                 <p class="lang-en">
-                    We are a company designed to optimize your foreign trade operations. We are solutions, quality and security.
-                    The ERG COMEX studio has been created with the objective of being a company dedicated exclusively
-                    to dealing with international operations and to be for our clients the largest comprehensive solution
-                    for their Comex operations, providing the best advice on extra-customs and customs procedures
-                    and legislative information on foreign trade. Day by day, we provide excellent services to different operators
-                    in the sector throughout the country, which has positioned us as the most reliable references.
+                    We are a company designed to optimize your foreign trade operations. 
+                    We offer solutions, quality and security. 
+                    ERG COMEX has been created with the objective of dedicating itself exclusively to managing international operations, being for our clients a comprehensive solution in their foreign trade operations. We provide the best advice on extra-customs procedures and legislative information on foreign trade. 
+                    Day by day, we offer excellent services to different operators in the sector throughout the country, which has positioned us as one of the most reliable, transparent and secure references in the provision of services within international trade.
                 </p>
             </div>
 
@@ -516,34 +478,28 @@ a {
     </div>
 </section>
 
-
-   <!-- Sección Servicios -->
-   <section class="py-5" id="servicios">
+<section class="py-5" id="servicios">
     <div class="container">
         <h2 class="text-center section-title lang-es">Servicios</h2>
         <h2 class="text-center section-title lang-en">Services</h2>
         <div class="row">
-           <!-- Servicio: Despachante de Aduana -->
-<div class="col-md-4 mb-4">
-    <div class="card service-card">
-        <div class="card-image" style="background-image: url('./img/people-taking-care-warehouse-logistics-together.jpg');"></div>
-        <div class="card-body">
-            <h3 class="lang-es">Despachante de Aduana</h3>
-            <h3 class="lang-en">Customs Broker</h3>
-            <p class="lang-es"> Facilitamos la gestión aduanera, asegurando que tus envíos cumplan con todas las normativas y evitando retrasos en el proceso.</p>
-            <p class="lang-en">We facilitate customs management, ensuring that your shipments comply with all regulations and avoiding delays in the process.</p>
-            <p class="lang-es"><strong>Costo de Asesoría / Honorarios:</strong> $XXX (consultar por tarifas actualizadas).</p>
-            <p class="lang-en"><strong>Consulting Fee / Brokerage Fees:</strong> $XXX (check for updated rates).</p>
-            <p class="lang-es"><strong>Actualizaciones:</strong> Incluye acceso a webinars y actualizaciones de la normativa AFIP.</p>
-            <p class="lang-en"><strong>Updates:</strong> Includes access to webinars and AFIP regulation updates.</p>
-        </div>
-    </div>
-</div>
-
-            <!-- Servicio: Agente de Transporte Aduanero -->
             <div class="col-md-4 mb-4">
                 <div class="card service-card">
-                    <div class="card-image" style="background-image: url('./img/full-shot-man-carrying-box\ \(1\).jpg');"></div>
+                    <div class="card-body">
+                        <h3 class="lang-es">Despachante de Aduana</h3>
+                        <h3 class="lang-en">Customs Broker</h3>
+                        <p class="lang-es">Facilitamos la gestión aduanera, asegurando que tus envíos cumplan con todas las normativas y evitando retrasos en el proceso.</p>
+                        <p class="lang-en">We facilitate customs management, ensuring that your shipments comply with all regulations and avoiding delays in the process.</p>
+                        <p class="lang-es"><strong>Costo de Asesoría / Honorarios:</strong> $XXX (consultar por tarifas actualizadas).</p>
+                        <p class="lang-en"><strong>Consulting Fee / Brokerage Fees:</strong> $XXX (check for updated rates).</p>
+                        <p class="lang-es"><strong>Actualizaciones:</strong> Incluye acceso a webinars y actualizaciones de la normativa AFIP.</p>
+                        <p class="lang-en"><strong>Updates:</strong> Includes access to webinars and AFIP regulation updates.</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-md-4 mb-4">
+                <div class="card service-card">
                     <div class="card-body">
                         <h3 class="lang-es">Agente de Transporte Aduanero</h3>
                         <h3 class="lang-en">Customs Transport Agent</h3>
@@ -557,10 +513,8 @@ a {
                 </div>
             </div>
 
-            <!-- Servicio: Importación / Exportación -->
             <div class="col-md-4 mb-4">
                 <div class="card service-card">
-                    <div class="card-image" style="background-image: url('./img/AEREO\ COMEX\ 6.jpg');"></div>
                     <div class="card-body">
                         <h3 class="lang-es">Importación/Exportación</h3>
                         <h3 class="lang-en">Import/Export</h3>
@@ -574,10 +528,8 @@ a {
                 </div>
             </div>
 
-            <!-- Servicio: Transporte Internacional -->
             <div class="col-md-4 mb-4">
                 <div class="card service-card">
-                    <div class="card-image" style="background-image: url('./img/transport-logistics-products.jpg');"></div>
                     <div class="card-body">
                         <h3 class="lang-es">Transporte Internacional</h3>
                         <h3 class="lang-en">International Transport</h3>
@@ -591,10 +543,8 @@ a {
                 </div>
             </div>
 
-            <!-- Servicio: Búsqueda de Proveedores en el Exterior -->
             <div class="col-md-4 mb-4">
                 <div class="card service-card">
-                    <div class="card-image" style="background-image: url('./img/business-people-working-data-project\ \(1\).jpg');"></div>
                     <div class="card-body">
                         <h3 class="lang-es">Búsqueda de Proveedores en el Exterior</h3>
                         <h3 class="lang-en">Search for Suppliers Abroad</h3>
@@ -608,10 +558,8 @@ a {
                 </div>
             </div>
 
-            <!-- Servicio: Verificación de Fábricas -->
             <div class="col-md-4 mb-4">
                 <div class="card service-card">
-                    <div class="card-image" style="background-image: url('./img/woman-working-as-engineer\ \(1\).jpg');"></div>
                     <div class="card-body">
                         <h3 class="lang-es">Verificación de Fábricas</h3>
                         <h3 class="lang-en">Factory Verification</h3>
@@ -628,7 +576,6 @@ a {
     </div>
 </section>
 
-
 <!-- Sección Contacto -->
 <section class="py-5" id="contacto">
     <div class="container">
@@ -637,7 +584,7 @@ a {
             <div class="col-md-6 d-flex align-items-stretch">
                 <div class="contact-info">
                     <h2 class="section-title lang-es colorContact">Contacto</h2>
-                    <h2 class="section-title lang-en">Contact</h2>
+                    <h2 class="section-title lang-en colorContactEn">Contact</h2>
                     <p class="lang-es"><i class="fa fa-map-marker-alt"></i> <strong>Ubicación:</strong> San Juan 2312 Piso 6 Oficina 3</p>
                     <p class="lang-en"><i class="fa fa-map-marker-alt"></i> <strong>Location:</strong> San Juan 2312 Piso 6 Oficina 3</p>
                     <p class="lang-es"><i class="fa fa-phone"></i> <strong>Celular comercial:</strong> +54 9 341 258-1898 / +54 9 3492 31-1575</p>
@@ -701,63 +648,55 @@ a {
 
     <!-- Script para cambiar de idioma -->
     <!-- JavaScript para cambiar el texto del botón de idioma y los enlaces -->
-<script>
-    function setLanguage(language) {
-        var languageText = document.getElementById("languageText");
-        var langEsElements = document.querySelectorAll('.lang-es');
-        var langEnElements = document.querySelectorAll('.lang-en');
-        var navLinks = document.getElementById('navLinks').getElementsByTagName('a');
-
-        if (language === 'es') {
-            // Cambiar el texto del botón
-            languageText.textContent = 'Español';
-
-            // Mostrar/ocultar elementos en español/inglés
-            langEsElements.forEach(el => el.style.display = 'block');
-            langEnElements.forEach(el => el.style.display = 'none');
-            
-            // Cambiar los enlaces y textos del menú a español
-            navLinks[0].setAttribute('href', '#nosotros');
-            navLinks[0].textContent = 'Nuestra Empresa';
-            navLinks[1].setAttribute('href', '#servicios');
-            navLinks[1].textContent = 'Servicios';
-            navLinks[2].setAttribute('href', '#contacto');
-            navLinks[2].textContent = 'Contacto';
-            navLinks[3].setAttribute('href', '#cotizacion');
-            navLinks[3].textContent = 'Solicitar Cotización';
-        } else if (language === 'en') {
-            // Cambiar el texto del botón
-            languageText.textContent = 'English';
-
-            // Mostrar/ocultar elementos en español/inglés
-            langEsElements.forEach(el => el.style.display = 'none');
-            langEnElements.forEach(el => el.style.display = 'block');
-
-            // Cambiar los enlaces y textos del menú a inglés
-            navLinks[0].setAttribute('href', '#about');
-            navLinks[0].textContent = 'About Us';
-            navLinks[1].setAttribute('href', '#services');
-            navLinks[1].textContent = 'Services';
-            navLinks[2].setAttribute('href', '#contact');
-            navLinks[2].textContent = 'Contact';
-            navLinks[3].setAttribute('href', '#quote');
-            navLinks[3].textContent = 'Request a Quote';
-        }
-    }
-
-    // Inicialización del selector para que funcione al cambiar idioma
-    document.querySelectorAll('.dropdown-item').forEach(item => {
-        item.addEventListener('click', (e) => {
-            const selectedLanguage = e.target.textContent;
-            if (selectedLanguage === 'Español') {
-                setLanguage('es');
-            } else if (selectedLanguage === 'English') {
-                setLanguage('en');
+    <script>
+        function setLanguage(language) {
+            var languageText = document.getElementById("languageText");
+            var langEsElements = document.querySelectorAll('.lang-es');
+            var langEnElements = document.querySelectorAll('.lang-en');
+            var navLinks = document.getElementById('navLinks').getElementsByTagName('a');
+    
+            if (language === 'es') {
+                // Cambiar el texto del botón
+                languageText.textContent = 'Español';
+    
+                // Mostrar/ocultar elementos en español/inglés
+                langEsElements.forEach(el => el.style.display = 'block');
+                langEnElements.forEach(el => el.style.display = 'none');
+                
+                // Cambiar solo el texto de los enlaces del menú, sin modificar los IDs
+                navLinks[0].textContent = 'Nuestra Empresa';
+                navLinks[1].textContent = 'Servicios';
+                navLinks[2].textContent = 'Contacto';
+                navLinks[3].textContent = 'Solicitar Cotización';
+            } else if (language === 'en') {
+                // Cambiar el texto del botón
+                languageText.textContent = 'English';
+    
+                // Mostrar/ocultar elementos en español/inglés
+                langEsElements.forEach(el => el.style.display = 'none');
+                langEnElements.forEach(el => el.style.display = 'block');
+    
+                // Cambiar solo el texto de los enlaces del menú, sin modificar los IDs
+                navLinks[0].textContent = 'About Us';
+                navLinks[1].textContent = 'Services';
+                navLinks[2].textContent = 'Contact';
+                navLinks[3].textContent = 'Request a Quote';
             }
+        }
+    
+        // Inicialización del selector para que funcione al cambiar idioma
+        document.querySelectorAll('.dropdown-item').forEach(item => {
+            item.addEventListener('click', (e) => {
+                const selectedLanguage = e.target.textContent;
+                if (selectedLanguage === 'Español') {
+                    setLanguage('es');
+                } else if (selectedLanguage === 'English') {
+                    setLanguage('en');
+                }
+            });
         });
-    });
-</script>
-
+    </script>
+    
 </body>
 
 </html>
