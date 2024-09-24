@@ -5,6 +5,7 @@
     <meta charset="UTF-8">
     <title>ERG COMEX</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/png" href="./img/Untitled-1.png">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Roboto:400,700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
@@ -53,6 +54,11 @@
             text-decoration: none;
         }
 
+        .navbar-brand {
+            color: #464d50
+            ;
+        }
+
         body {
             font-family: 'Roboto', sans-serif;
         }
@@ -61,16 +67,18 @@
             font-weight: bold;
         }
 
+        
+
         .banner {
-            position: relative;
-            background-image: url('./img/logistics-transportation-container-cargo-ship-cargo-plane-with-working-crane-bridge-shipyard-sunrise-logistic-import-export-transport-industry-background-ai-generative.jpg');
-            background-size: cover;
-            background-position: center;
-            color: #fff;
-            text-align: center;
-            padding: 150px 20px;
-            overflow: hidden;
-        }
+    position: relative;
+    background-image: url('./img/logistics-transportation-container-cargo-ship-cargo-plane-with-working-crane-bridge-shipyard-sunrise-logistic-import-export-transport-industry-background-ai-generative.jpg');
+    background-size: cover;
+    background-position: center;
+    color: #fff;
+    text-align: center;
+    padding: 200px 20px; 
+    overflow: hidden;
+}
 
         .banner::before {
             content: '';
@@ -274,6 +282,12 @@
         }
 
 
+.custom-container {
+    margin-left: 20px;  
+    margin-right: 20px; 
+    max-width: calc(100% - 40px); 
+}
+
     </style>
 </head>
 
@@ -281,30 +295,16 @@
 
 <!-- Menú de Navegación -->
 <nav class="navbar navbar-expand-lg navbar-light bg-light fixed-top">
-    <div class="container">
+    <div class="container custom-container">
         <!-- Logo de la empresa -->
         <a class="navbar-brand d-flex align-items-center" href="#">
-            <img src="./img/page_1_cropped_more (1)-vector-terminado.png" alt="vectorLogo" class="vectorLogo" style="width: 65px; margin-right: 10px;">
+            <img src="./img/Untitled-1.png" alt="vectorLogo" class="vectorLogo" style="width: 50px; margin-right: 10px;">
             ERG COMEX
         </a>
         
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Alternar navegación">
             <span class="navbar-toggler-icon"></span>
         </button>
-        
-        <div class="d-flex align-items-center ms-auto">
-    <div class="dropdown">
-        <button id="languageButton" class="btn btn-dark dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" style="border-radius: 30px; padding: 5px 15px; font-size: 0.875rem;">
-            <img src="./img/vectorWww.png" alt="Icono" id="worldIcon" style="width: 15px; margin-right: 5px; filter: brightness(0) invert(1);">
-            <span id="languageText" style="color: white;">Español</span>
-        </button>
-        <ul class="dropdown-menu" aria-labelledby="languageDropdown">
-            <li><a class="dropdown-item" href="#" onclick="setLanguage('es')">Español</a></li>
-            <li><a class="dropdown-item" href="#" onclick="setLanguage('en')">English</a></li>
-        </ul>
-    </div>
-</div>
-
         
         <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
             <ul class="navbar-nav" id="navLinks">
@@ -318,10 +318,23 @@
                 <li class="nav-item">
                     <a class="nav-link" href="#cotizacion">Solicitar Cotización</a></li>
             </ul>
+            
+            <!-- Botón de Lenguaje MOVIDO a la derecha -->
+            <div class="d-flex align-items-center ms-3">
+                <div class="dropdown">
+                    <button id="languageButton" class="btn btn-dark dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" style="border-radius: 30px; padding: 5px 15px; font-size: 0.875rem;">
+                        <img src="./img/vectorWww.png" alt="Icono" id="worldIcon" style="width: 15px; margin-right: 5px; filter: brightness(0) invert(1);">
+                        <span id="languageText" style="color: white;">Español</span>
+                    </button>
+                    <ul class="dropdown-menu" aria-labelledby="languageDropdown">
+                        <li><a class="dropdown-item" href="#" onclick="setLanguage('es')">Español</a></li>
+                        <li><a class="dropdown-item" href="#" onclick="setLanguage('en')">English</a></li>
+                    </ul>
+                </div>
+            </div>
         </div>
     </div>
 </nav>
-
 
 
 
@@ -338,6 +351,8 @@
     .navbar-nav .nav-link:hover {
         color: #7d8dc4; 
     }
+
+    
 </style>
 
 
@@ -347,20 +362,23 @@
 
 <!-- Banner -->
 <section class="banner">
-    <div class="container">
-        <h1 class="display-4 lang-es colorH1Banner">Bienvenido a ERG COMEX</h1>
-        <h1 class="display-4 lang-en colorH1Banner">Welcome to ERG COMEX</h1>
+    <div class="container text-center">
+        <!-- H1 para español con vector en lugar del texto "ERG COMEX" -->
+        <h1 class="display-4 lang-es colorH1Banner">
+            Bienvenido a <br>
+            <img src="./img/vectorTitulo.png" alt="ERG COMEX" style="height: 1.2em; vertical-align: middle;">
+        </h1>
+
+        <!-- H1 para inglés con vector en lugar del texto "ERG COMEX" -->
+        <h1 class="display-4 lang-en colorH1Banner">
+            Welcome to <br>
+            <img src="./img/vectorTitulo.png" alt="ERG COMEX" style="height: 1.2em; vertical-align: middle;">
+        </h1>
         
-        <div class="text-image-wrapper">
-            <div class="text-container lang-es">
-                <p class="lead colorP">Soluciones en Comercio Exterior</p>
-            </div>
-            <div class="text-container lang-en">
-                <p class="lead colorP">Solutions in Foreign Trade</p>
-            
+        
+        </div>
     </div>
 </section>
-
 
 
 
