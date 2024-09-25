@@ -167,11 +167,31 @@
     background-color: #7d8dc4;
 }
 
+/* Estilos generales para las imágenes */
 .full-height {
-    height: 100%;
-    object-fit: cover;
-    border-radius: 10px;
+    height: 100%; 
+    object-fit: cover; 
+    border-radius: 10px; 
 }
+
+/* Ajustes específicos para las secciones de Quiénes Somos, Visión y Valores */
+#quienes-somos, #vision, #valores {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+    border-radius: 10px;
+    overflow: hidden; 
+}
+
+#quienes-somos img, #vision img, #valores img {
+    width: 100%; 
+    height: 100%; 
+    object-fit: cover; 
+    border-radius: 10px; 
+}
+
+
 
 #servicios {
     background-color: #ffffff;
@@ -293,52 +313,61 @@
 
 <body>
 
-<!-- Menú de Navegación -->
+
+  <!-- Menú de Navegación -->
 <nav class="navbar navbar-expand-lg navbar-light bg-light fixed-top">
-    <div class="container custom-container">
-        <!-- Logo de la empresa -->
+    <div class="container custom-container d-flex justify-content-between align-items-center">
         <a class="navbar-brand d-flex align-items-center" href="#">
             <img src="./img/Untitled-1.png" alt="vectorLogo" class="vectorLogo" style="width: 50px; margin-right: 10px;">
             ERG COMEX
         </a>
-        
-        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Alternar navegación">
+
+        <button class="navbar-toggler" id="navbarToggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Alternar navegación">
             <span class="navbar-toggler-icon"></span>
         </button>
-        
-        <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
-            <ul class="navbar-nav" id="navLinks">
+
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav" style="margin-left: auto; margin-right: 15px;">
                 <li class="nav-item">
                     <a class="nav-link" href="#nosotros">Nuestra Empresa</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="#servicios">Servicios</a></li>
+                    <a class="nav-link" href="#servicios">Servicios</a>
+                </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="#contacto">Contacto</a></li>
+                    <a class="nav-link" href="#contacto">Contacto</a>
+                </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="#cotizacion">Solicitar Cotización</a></li>
+                    <a class="nav-link" href="#cotizacion">Solicitar Cotización</a>
+                </li>
             </ul>
-            
-            <!-- Botón de Lenguaje MOVIDO a la derecha -->
-            <div class="d-flex align-items-center ms-3">
+
+            <div class="d-none d-lg-flex align-items-center">
                 <div class="dropdown">
-                    <button id="languageButton" class="btn btn-dark dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" style="border-radius: 30px; padding: 5px 15px; font-size: 0.875rem;">
+                    <button id="languageButtonLg" class="btn btn-dark dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" style="border-radius: 30px; padding: 5px 15px; font-size: 0.875rem;">
                         <img src="./img/vectorWww.png" alt="Icono" id="worldIcon" style="width: 15px; margin-right: 5px; filter: brightness(0) invert(1);">
-                        <span id="languageText" style="color: white;">Español</span>
+                        <span id="languageTextLg" style="color: white;">Español</span>
                     </button>
-                    <ul class="dropdown-menu" aria-labelledby="languageDropdown">
+                    <ul class="dropdown-menu" aria-labelledby="languageDropdownLg">
                         <li><a class="dropdown-item" href="#" onclick="setLanguage('es')">Español</a></li>
                         <li><a class="dropdown-item" href="#" onclick="setLanguage('en')">English</a></li>
                     </ul>
                 </div>
             </div>
         </div>
+
+        <div class="dropdown d-lg-none" id="languageDropdownSmall" style="display: none; position: absolute; right: 0; top: 70px; margin-right: 15px;">
+            <button id="languageButton" class="btn btn-dark dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" style="border-radius: 30px; padding: 5px 15px; font-size: 0.875rem;">
+                <img src="./img/vectorWww.png" alt="Icono" id="worldIcon" style="width: 15px; margin-right: 5px; filter: brightness(0) invert(1);">
+                <span id="languageText" style="color: white;">Español</span>
+            </button>
+            <ul class="dropdown-menu" aria-labelledby="languageDropdown">
+                <li><a class="dropdown-item" href="#" onclick="setLanguage('es')">Español</a></li>
+                <li><a class="dropdown-item" href="#" onclick="setLanguage('en')">English</a></li>
+            </ul>
+        </div>
     </div>
 </nav>
-
-
-
-
 
 
 
@@ -363,13 +392,13 @@
 <!-- Banner -->
 <section class="banner">
     <div class="container text-center">
-        <!-- H1 para español con vector en lugar del texto "ERG COMEX" -->
+        
         <h1 class="display-4 lang-es colorH1Banner">
             Bienvenido a <br>
             <img src="./img/vectorTitulo.png" alt="ERG COMEX" style="height: 1.2em; vertical-align: middle;">
         </h1>
 
-        <!-- H1 para inglés con vector en lugar del texto "ERG COMEX" -->
+        
         <h1 class="display-4 lang-en colorH1Banner">
             Welcome to <br>
             <img src="./img/vectorTitulo.png" alt="ERG COMEX" style="height: 1.2em; vertical-align: middle;">
@@ -409,7 +438,7 @@
             </div>
 
             <!-- Columna de la imagen -->
-            <div class="col-md-6">
+            <div id="quienes-somos" class="col-md-6">
                 <img src="./img/industrial-port-container-yard.jpg" alt="Imagen descriptiva" class="img-fluid full-height">
             </div>
         </div>
@@ -422,7 +451,7 @@
         <div class="container">
             <div class="row d-flex align-items-center">
                 <!-- Columna de la imagen -->
-                <div class="col-md-6 order-md-1 order-2">
+                <div id="vision" class="col-md-6 order-md-1 order-2">
                     <img src="./img/business-people-brainstorming-ideas-plan-work-report-with-data-charts-graphs-analyzing-research-information-create-successful-project-office-partnership-collaboration.jpg" alt="Imagen descriptiva" class="img-fluid full-height">
                 </div>
     
@@ -462,7 +491,7 @@
             </div>
 
             <!-- Columna de la imagen -->
-            <div class="col-md-6">
+            <div id="valores" class="col-md-6">
                 <img src="./img/transport-logistics-concept.jpg" alt="Imagen descriptiva" class="img-fluid full-height">
             </div>
         </div>
@@ -637,37 +666,27 @@
     <!-- Iconos de Bootstrap -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
 
-    <!-- Script para cambiar de idioma -->
-    <!-- JavaScript para cambiar el texto del botón de idioma y los enlaces -->
+    <!-- cambiar de idioma -->
+    
     <script>
         function setLanguage(language) {
             var languageText = document.getElementById("languageText");
             var langEsElements = document.querySelectorAll('.lang-es');
             var langEnElements = document.querySelectorAll('.lang-en');
-            var navLinks = document.getElementById('navLinks').getElementsByTagName('a');
+            var navLinks = document.getElementById('navbarNav').getElementsByTagName('a');
     
             if (language === 'es') {
-                // Cambiar el texto del botón
                 languageText.textContent = 'Español';
-    
-                // Mostrar/ocultar elementos en español/inglés
                 langEsElements.forEach(el => el.style.display = 'block');
                 langEnElements.forEach(el => el.style.display = 'none');
-                
-                // Cambiar solo el texto de los enlaces del menú, sin modificar los IDs
                 navLinks[0].textContent = 'Nuestra Empresa';
                 navLinks[1].textContent = 'Servicios';
                 navLinks[2].textContent = 'Contacto';
                 navLinks[3].textContent = 'Solicitar Cotización';
             } else if (language === 'en') {
-                // Cambiar el texto del botón
                 languageText.textContent = 'English';
-    
-                // Mostrar/ocultar elementos en español/inglés
                 langEsElements.forEach(el => el.style.display = 'none');
                 langEnElements.forEach(el => el.style.display = 'block');
-    
-                // Cambiar solo el texto de los enlaces del menú, sin modificar los IDs
                 navLinks[0].textContent = 'About Us';
                 navLinks[1].textContent = 'Services';
                 navLinks[2].textContent = 'Contact';
@@ -675,16 +694,28 @@
             }
         }
     
-        // Inicialización del selector para que funcione al cambiar idioma
-        document.querySelectorAll('.dropdown-item').forEach(item => {
-            item.addEventListener('click', (e) => {
-                const selectedLanguage = e.target.textContent;
-                if (selectedLanguage === 'Español') {
-                    setLanguage('es');
-                } else if (selectedLanguage === 'English') {
-                    setLanguage('en');
-                }
+        document.addEventListener("DOMContentLoaded", function () {
+            var navbarCollapse = document.getElementById('navbarNav');
+            var navbarToggler = document.getElementById('navbarToggler');
+            var navLinks = document.querySelectorAll('#navbarNav .nav-link');
+    
+            navLinks.forEach(function (link) {
+                link.addEventListener('click', function () {
+                    var isExpanded = navbarToggler.getAttribute('aria-expanded') === 'true';
+                    if (isExpanded) {
+                        navbarToggler.click();
+                    }
+                });
             });
+        });
+    
+        document.getElementById('navbarToggler').addEventListener('click', function() {
+            const languageDropdownSmall = document.getElementById('languageDropdownSmall');
+            if (languageDropdownSmall.style.display === 'block') {
+                languageDropdownSmall.style.display = 'none';
+            } else {
+                languageDropdownSmall.style.display = 'block';
+            }
         });
     </script>
     
