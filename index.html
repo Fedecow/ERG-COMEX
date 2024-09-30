@@ -37,7 +37,7 @@
         }
 
         h3 {
-            font-size: 1.2em;
+            font-size: 1em;
             margin-bottom: 0.5em;
         }
 
@@ -192,7 +192,6 @@
 }
 
 
-
 #servicios {
     background-color: #ffffff;
     padding-top: auto;
@@ -200,38 +199,97 @@
 
 .service-card {
     position: relative;
-    overflow: hidden;
-    border: 1px solid #7d8dc4;
-    border-radius: 10px;
+    overflow: hidden; 
+    border: 1px solid #2c3e50;
+    border-radius: 50px; 
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    background-color: #ffffff;
+    background-color: #ffffff; 
     transition: transform 0.3s ease;
     transform: scale(1);
     cursor: pointer;
+    height: auto; 
+    display: flex;             
+    flex-direction: column; 
+    justify-content: center; 
+    text-align: center;
+    background-size: cover; 
+    background-position: center;
+}
+
+.service-card::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-size: cover;
+    background-position: center;
+    background-image: inherit; 
+    z-index: -1;
+    filter: blur(3px);
+}
+
+.card-body {
+    position: relative;
+    z-index: 1; 
+    color: #7d8dc4; 
+    flex-grow: 1; 
+    display: flex; 
+    flex-direction: column; 
+    justify-content: center; 
+    padding: 20px;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.2); 
 }
 
 .service-card h3 {
-    color: #7d8dc4;
-    text-align: center;
-    padding: 20px 0;
-}
-
-.service-card .card-body {
-    opacity: 1;
-    padding: 20px;
-}
-
-.service-card p {
-    margin-bottom: 15px;
-    color: #464d50;
-}
-
-.service-card strong {
-    color: #464d50;
+    color: #2c3e50; 
+    text-align: center; 
+    margin: 0; 
 }
 
 .service-card:hover {
     transform: scale(1.05);
+}
+
+@media (max-width: 768px) {
+    .service-card::before {
+        display: none; 
+    }
+}
+
+@media (min-width: 768px) { 
+    .service-card {
+        height: 250px; 
+        padding: 20px; 
+        border-radius: 15px;
+        
+    }
+
+    .service-card h3 {
+        color: #ffffff; 
+        text-align: center; 
+        margin: 0; 
+        text-shadow: 1px 1px 2px rgba(0, 0, 0, 1); 
+        font-size: 24px;
+    }
+
+    .service-card:hover {
+        transform: scale(1.05); 
+        box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); 
+    }
+}
+
+@media (min-width: 768px) and (max-width: 991px) {
+    .service-card {
+        height: 250px; /* Mantén las tarjetas del mismo tamaño que en escritorio */
+    }
+
+    .service-card h3 {
+        font-size: 18px; /* Reduce el tamaño del texto para que se ajuste a la tarjeta */
+        white-space: normal; /* Permite que las palabras salten de línea */
+        word-wrap: break-word; /* Evita que las palabras largas se corten */
+    }
 }
 
 
@@ -248,8 +306,8 @@
 
         .section-title {
             
-            
             margin-top: 40px;
+            margin-bottom: 40px;
         }
 
         .service-item, .value-item {
@@ -498,103 +556,70 @@
     </div>
 </section>
 
+
+         <!-- Sección servicios -->
 <section class="py-5" id="servicios">
     <div class="container">
-        <h2 class="text-center section-title lang-es">Servicios</h2>
+        <h2 class="text-center section-title lang-es colorServicios">Servicios</h2>
         <h2 class="text-center section-title lang-en">Services</h2>
         <div class="row">
             <div class="col-md-4 mb-4">
-                <div class="card service-card">
+                <div class="card service-card" data-bg-image="./img/people-taking-care-warehouse-logistics-together.jpg">
                     <div class="card-body">
                         <h3 class="lang-es">Despachante de Aduana</h3>
                         <h3 class="lang-en">Customs Broker</h3>
-                        <p class="lang-es">Facilitamos la gestión aduanera, asegurando que tus envíos cumplan con todas las normativas y evitando retrasos en el proceso.</p>
-                        <p class="lang-en">We facilitate customs management, ensuring that your shipments comply with all regulations and avoiding delays in the process.</p>
-                        <p class="lang-es"><strong>Costo de Asesoría / Honorarios:</strong> $XXX (consultar por tarifas actualizadas).</p>
-                        <p class="lang-en"><strong>Consulting Fee / Brokerage Fees:</strong> $XXX (check for updated rates).</p>
-                        <p class="lang-es"><strong>Actualizaciones:</strong> Incluye acceso a webinars y actualizaciones de la normativa AFIP.</p>
-                        <p class="lang-en"><strong>Updates:</strong> Includes access to webinars and AFIP regulation updates.</p>
                     </div>
                 </div>
             </div>
 
             <div class="col-md-4 mb-4">
-                <div class="card service-card">
+                <div class="card service-card" data-bg-image="./img/full-shot-man-carrying-box (1).jpg">
                     <div class="card-body">
                         <h3 class="lang-es">Agente de Transporte Aduanero</h3>
                         <h3 class="lang-en">Customs Transport Agent</h3>
-                        <p class="lang-es">Nos encargamos de organizar el transporte de tus productos, garantizando que lleguen a su destino cumpliendo con las regulaciones.</p>
-                        <p class="lang-en">We take care of organizing the transportation of your products, guaranteeing that they reach their destination in compliance with regulations.</p>
-                        <p class="lang-es"><strong>Costo de Asesoría / Honorarios:</strong> $XXX (consultar por tarifas actualizadas).</p>
-                        <p class="lang-en"><strong>Consulting Fee / Brokerage Fees:</strong> $XXX (check for updated rates).</p>
-                        <p class="lang-es"><strong>Actualizaciones:</strong> Incluye acceso a webinars y actualizaciones de la normativa AFIP.</p>
-                        <p class="lang-en"><strong>Updates:</strong> Includes access to webinars and AFIP regulation updates.</p>
                     </div>
                 </div>
             </div>
 
             <div class="col-md-4 mb-4">
-                <div class="card service-card">
+                <div class="card service-card" data-bg-image="./img/AEREO COMEX 6.jpg">
                     <div class="card-body">
-                        <h3 class="lang-es">Importación/Exportación</h3>
-                        <h3 class="lang-en">Import/Export</h3>
-                        <p class="lang-es">Te apoyamos en la importación y exportación de productos, manejando toda la documentación necesaria para un proceso sin complicaciones.</p>
-                        <p class="lang-en">We support you in the import and export of products, handling all the necessary documentation for a hassle-free process.</p>
-                        <p class="lang-es"><strong>Costo de Asesoría / Honorarios:</strong> $XXX (consultar por tarifas actualizadas).</p>
-                        <p class="lang-en"><strong>Consulting Fee / Brokerage Fees:</strong> $XXX (check for updated rates).</p>
-                        <p class="lang-es"><strong>Actualizaciones:</strong> Incluye acceso a webinars y actualizaciones de la normativa AFIP.</p>
-                        <p class="lang-en"><strong>Updates:</strong> Includes access to webinars and AFIP regulation updates.</p>
+                        <h3 class="lang-es">Importación y Exportación</h3>
+                        <h3 class="lang-en">Import & Export</h3>
                     </div>
                 </div>
             </div>
 
             <div class="col-md-4 mb-4">
-                <div class="card service-card">
+                <div class="card service-card" data-bg-image="./img/transport-logistics-products.jpg">
                     <div class="card-body">
                         <h3 class="lang-es">Transporte Internacional</h3>
                         <h3 class="lang-en">International Transport</h3>
-                        <p class="lang-es">Conectamos tus productos con el mundo, brindando opciones flexibles y seguras para el transporte internacional, adaptadas a tus necesidades.</p>
-                        <p class="lang-en">We connect your products with the world, providing flexible and safe options for international transportation, adapted to your needs.</p>
-                        <p class="lang-es"><strong>Costo de Asesoría / Honorarios:</strong> $XXX (consultar por tarifas actualizadas).</p>
-                        <p class="lang-en"><strong>Consulting Fee / Brokerage Fees:</strong> $XXX (check for updated rates).</p>
-                        <p class="lang-es"><strong>Actualizaciones:</strong> Incluye acceso a webinars y actualizaciones de la normativa AFIP.</p>
-                        <p class="lang-en"><strong>Updates:</strong> Includes access to webinars and AFIP regulation updates.</p>
                     </div>
                 </div>
             </div>
 
             <div class="col-md-4 mb-4">
-                <div class="card service-card">
+                <div class="card service-card" data-bg-image="./img/business-people-working-data-project (1).jpg">
                     <div class="card-body">
                         <h3 class="lang-es">Búsqueda de Proveedores en el Exterior</h3>
                         <h3 class="lang-en">Search for Suppliers Abroad</h3>
-                        <p class="lang-es">Identificamos y seleccionamos proveedores confiables en el extranjero, facilitando el acceso a productos de calidad y mejores precios para tu negocio.</p>
-                        <p class="lang-en">We identify and select reliable suppliers abroad, facilitating access to quality products and better prices for your business.</p>
-                        <p class="lang-es"><strong>Costo de Asesoría / Honorarios:</strong> $XXX (consultar por tarifas actualizadas).</p>
-                        <p class="lang-en"><strong>Consulting Fee / Brokerage Fees:</strong> $XXX (check for updated rates).</p>
-                        <p class="lang-es"><strong>Actualizaciones:</strong> Incluye acceso a webinars y actualizaciones de la normativa AFIP.</p>
-                        <p class="lang-en"><strong>Updates:</strong> Includes access to webinars and AFIP regulation updates.</p>
                     </div>
                 </div>
             </div>
 
             <div class="col-md-4 mb-4">
-                <div class="card service-card">
+                <div class="card service-card" data-bg-image="./img/woman-working-as-engineer (1).jpg">
                     <div class="card-body">
                         <h3 class="lang-es">Verificación de Fábricas</h3>
                         <h3 class="lang-en">Factory Verification</h3>
-                        <p class="lang-es">Realizamos auditorías exhaustivas en fábricas, asegurando el cumplimiento de estándares de calidad y condiciones laborales para una producción confiable.</p>
-                        <p class="lang-en">We carry out exhaustive audits in factories, ensuring compliance with quality standards and working conditions for reliable production.</p>
-                        <p class="lang-es"><strong>Costo de Asesoría / Honorarios:</strong> $XXX (consultar por tarifas actualizadas).</p>
-                        <p class="lang-en"><strong>Consulting Fee / Brokerage Fees:</strong> $XXX (check for updated rates).</p>
-                        <p class="lang-es"><strong>Actualizaciones:</strong> Incluye acceso a webinars y actualizaciones de la normativa AFIP.</p>
-                        <p class="lang-en"><strong>Updates:</strong> Includes access to webinars and AFIP regulation updates.</p>
                     </div>
                 </div>
             </div>
         </div>
     </div>
 </section>
+
 
 <!-- Sección Contacto -->
 <section class="py-5" id="contacto">
@@ -695,29 +720,56 @@
         }
     
         document.addEventListener("DOMContentLoaded", function () {
-            var navbarCollapse = document.getElementById('navbarNav');
             var navbarToggler = document.getElementById('navbarToggler');
+            var languageDropdownSmall = document.getElementById('languageDropdownSmall');
             var navLinks = document.querySelectorAll('#navbarNav .nav-link');
+            var navbarCollapse = document.getElementById('navbarNav');
     
+            
+            navbarCollapse.addEventListener('shown.bs.collapse', function () {
+                languageDropdownSmall.style.display = 'block'; 
+            });
+    
+            
+            navbarCollapse.addEventListener('hidden.bs.collapse', function () {
+                languageDropdownSmall.style.display = 'none'; 
+            });
+    
+            
             navLinks.forEach(function (link) {
                 link.addEventListener('click', function () {
                     var isExpanded = navbarToggler.getAttribute('aria-expanded') === 'true';
                     if (isExpanded) {
-                        navbarToggler.click();
+                        navbarToggler.click(); 
                     }
                 });
             });
         });
-    
-        document.getElementById('navbarToggler').addEventListener('click', function() {
-            const languageDropdownSmall = document.getElementById('languageDropdownSmall');
-            if (languageDropdownSmall.style.display === 'block') {
-                languageDropdownSmall.style.display = 'none';
+
+        document.addEventListener("DOMContentLoaded", function () {
+    const serviceCards = document.querySelectorAll('.service-card');
+
+    function setBackgroundImages() {
+        serviceCards.forEach(card => {
+            const bgImage = card.getAttribute('data-bg-image');
+            if (window.innerWidth > 768) { // Solo aplica si es escritorio
+                card.style.backgroundImage = `url('${bgImage}')`;
             } else {
-                languageDropdownSmall.style.display = 'block';
+                card.style.backgroundImage = 'none'; // Elimina el fondo en mobile
             }
         });
+    }
+
+    // Establece las imágenes de fondo al cargar la página
+    setBackgroundImages();
+
+    // Actualiza el fondo cuando se cambia el tamaño de la ventana
+    window.addEventListener('resize', setBackgroundImages);
+});
+
+
     </script>
+    
     
 </body>
 
