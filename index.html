@@ -214,8 +214,10 @@
     text-align: center;
     background-size: cover; 
     background-position: center;
+    
 }
 
+/* Fondo de la card con un overlay oscuro */
 .service-card::before {
     content: "";
     position: absolute;
@@ -227,10 +229,14 @@
     background-position: center;
     background-image: inherit; 
     z-index: -1;
-    filter: blur(3px);
+    opacity: 1; /* Opacidad por defecto en mobile */
 }
 
+
+
+/* Estilo del contenido */
 .card-body {
+    
     position: relative;
     z-index: 1; 
     color: #7d8dc4; 
@@ -248,30 +254,62 @@
     margin: 0; 
 }
 
+/* Hover para la tarjeta */
 .service-card:hover {
     transform: scale(1.05);
 }
 
+/* Estilos para pantallas menores a 768px */
 @media (max-width: 768px) {
     .service-card::before {
         display: none; 
     }
+
+    .service-card {
+        border-radius: 50px; 
+    }
+    
 }
 
+/* Estilos para pantallas mayores a 768px */
 @media (min-width: 768px) { 
     .service-card {
         height: 250px; 
         padding: 20px; 
-        border-radius: 15px;
+        border-radius: 5px;
+        border: none;
         
+    }
+/* Overlay oscuro */
+.service-card::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.5); 
+    z-index: 0; 
+}
+    /* Elimina el desenfoque */
+    .service-card::before {
+        opacity: 1; 
+        filter: none; 
+    }
+
+    /* Texto más brillante en pantallas grandes */
+    .service-card .card-body {
+        filter: brightness(1.2); 
+       
     }
 
     .service-card h3 {
         color: #ffffff; 
         text-align: center; 
         margin: 0; 
-        text-shadow: 1px 1px 2px rgba(0, 0, 0, 1); 
-        font-size: 24px;
+        text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5); 
+        font-size: 22px;
+        font-weight:normal;
     }
 
     .service-card:hover {
@@ -280,6 +318,7 @@
     }
 }
 
+/* Estilos para pantallas entre 768px y 991px */
 @media (min-width: 768px) and (max-width: 991px) {
     .service-card {
         height: 250px; /* Mantén las tarjetas del mismo tamaño que en escritorio */
