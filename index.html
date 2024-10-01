@@ -245,7 +245,7 @@
     flex-direction: column; 
     justify-content: center; 
     padding: 20px;
-    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.2); 
+     
 }
 
 .service-card h3 {
@@ -325,14 +325,18 @@
     }
 
     .service-card h3 {
-        font-size: 18px; /* Reduce el tamaño del texto para que se ajuste a la tarjeta */
-        white-space: normal; /* Permite que las palabras salten de línea */
-        word-wrap: break-word; /* Evita que las palabras largas se corten */
+        font-size: 18px; 
+        white-space: normal; 
+        word-wrap: break-word;
     }
 }
 
 
           /* Estilos para la sección de contacto */
+
+         
+
+
           #contacto {
             background-color: #182c44; 
             color: #cfd3d9; 
@@ -734,29 +738,33 @@
     
     <script>
         function setLanguage(language) {
-            var languageText = document.getElementById("languageText");
-            var langEsElements = document.querySelectorAll('.lang-es');
-            var langEnElements = document.querySelectorAll('.lang-en');
-            var navLinks = document.getElementById('navbarNav').getElementsByTagName('a');
-    
-            if (language === 'es') {
-                languageText.textContent = 'Español';
-                langEsElements.forEach(el => el.style.display = 'block');
-                langEnElements.forEach(el => el.style.display = 'none');
-                navLinks[0].textContent = 'Nuestra Empresa';
-                navLinks[1].textContent = 'Servicios';
-                navLinks[2].textContent = 'Contacto';
-                navLinks[3].textContent = 'Solicitar Cotización';
-            } else if (language === 'en') {
-                languageText.textContent = 'English';
-                langEsElements.forEach(el => el.style.display = 'none');
-                langEnElements.forEach(el => el.style.display = 'block');
-                navLinks[0].textContent = 'About Us';
-                navLinks[1].textContent = 'Services';
-                navLinks[2].textContent = 'Contact';
-                navLinks[3].textContent = 'Request a Quote';
-            }
-        }
+    var languageText = document.getElementById("languageText"); // Para mobile
+    var languageTextLg = document.getElementById("languageTextLg"); // Para desktop
+    var langEsElements = document.querySelectorAll('.lang-es');
+    var langEnElements = document.querySelectorAll('.lang-en');
+    var navLinks = document.getElementById('navbarNav').getElementsByTagName('a');
+
+    if (language === 'es') {
+        languageText.textContent = 'Español';
+        languageTextLg.textContent = 'Español'; // Actualiza el botón de escritorio
+        langEsElements.forEach(el => el.style.display = 'block');
+        langEnElements.forEach(el => el.style.display = 'none');
+        navLinks[0].textContent = 'Nuestra Empresa';
+        navLinks[1].textContent = 'Servicios';
+        navLinks[2].textContent = 'Contacto';
+        navLinks[3].textContent = 'Solicitar Cotización';
+    } else if (language === 'en') {
+        languageText.textContent = 'English';
+        languageTextLg.textContent = 'English'; // Actualiza el botón de escritorio
+        langEsElements.forEach(el => el.style.display = 'none');
+        langEnElements.forEach(el => el.style.display = 'block');
+        navLinks[0].textContent = 'About Us';
+        navLinks[1].textContent = 'Services';
+        navLinks[2].textContent = 'Contact';
+        navLinks[3].textContent = 'Request a Quote';
+    }
+}
+
     
         document.addEventListener("DOMContentLoaded", function () {
             var navbarToggler = document.getElementById('navbarToggler');
